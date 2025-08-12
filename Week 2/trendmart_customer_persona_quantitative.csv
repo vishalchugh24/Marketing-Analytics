@@ -1,0 +1,101 @@
+﻿Customer_ID,Name,Age,Gender,Location,Education Level,Occupation,Annual Income,Marital Status,Product Name,Product Line,Online Purchase Frequency,Offline Purchase Frequency,Communication Preference,Technology Usage,Average Order Value,NPS Score,Customer Lifespan Years,Marketing Spend,Total Purchases,Revenue Generated
+CUST1,Aarav Sharma,34,Male,Rural,Post Graduate,IT Professional,986983,Divorced,T-shirt,Fashion,1,8,Social,Low,874,6,3.3,14362,9,7866
+CUST2,Shreya Sen,53,Female,Urban,Undergraduate,Engineer,383060,Married,Handbag,Fashion,6,2,Phone,Low,3861,3,1.3,37194,50,193050
+CUST3,Suresh Nair,44,Male,Rural,PhD,Consultant,872961,Divorced,Smartphone,Electronics,1,6,Social,High,737,3,3.4,10676,14,10318
+CUST4,Shreya Sen,20,Female,Rural,Graduate,Marketing Manager,1449393,Single,Wrist Watch,Accessories,3,9,Email,Medium,3852,9,5.9,39210,14,53928
+CUST5,Neha Bhatia,43,Female,Rural,Graduate,Marketing Manager,1275043,Divorced,Refrigerator,Fashion,2,3,Phone,Low,3626,4,7.2,48542,17,61642
+CUST6,Shreya Sen,32,Female,Urban,PhD,Doctor,733141,Divorced,Smartphone,Electronics,2,2,Social,Low,2904,6,8.6,8011,46,133584
+CUST7,Neha Bhatia,22,Female,Urban,PhD,Consultant,1423556,Divorced,Laptop,Fashion,3,7,Social,Medium,3995,3,9,33639,8,31960
+CUST8,Sneha Kapoor,31,Female,Rural,Post Graduate,Student,881657,Widowed,T-shirt,Fashion,9,1,Email,High,1419,9,9.8,30766,6,8514
+CUST9,Ananya Rao,46,Female,Rural,Undergraduate,Consultant,798466,Single,Laptop,Electronics,7,8,Email,Low,3993,9,7.4,26805,45,179685
+CUST10,Rajesh Yadav,39,Male,Urban,Undergraduate,IT Professional,599368,Single,Wrist Watch,Electronics,4,10,Social,High,562,5,3.7,23794,1,562
+CUST11,Aarav Sharma,35,Male,Urban,PhD,Small Business Owner,251903,Single,T-shirt,Home Appliances,6,6,Phone,Medium,4947,2,3.3,47816,3,14841
+CUST12,Simran Kaur,20,Female,Rural,Undergraduate,Small Business Owner,280949,Widowed,Wrist Watch,Furniture,0,0,Email,Low,3296,7,8.6,32689,10,32960
+CUST13,Ritika Malhotra,31,Female,Urban,Graduate,Teacher,1287892,Single,Shoes,Accessories,10,8,Phone,High,4786,3,2.6,38972,14,67004
+CUST14,Karan Kapoor,31,Male,Rural,Post Graduate,Marketing Manager,741816,Married,Wrist Watch,Fashion,5,9,Social,Medium,1542,1,2,39767,14,21588
+CUST15,Neha Bhatia,39,Female,Rural,Graduate,Small Business Owner,964683,Married,T-shirt,Fashion,4,6,Phone,Medium,1351,1,9.2,38950,45,60795
+CUST16,Ritika Malhotra,40,Female,Rural,PhD,Consultant,288716,Divorced,Refrigerator,Furniture,2,3,Phone,High,2309,5,6.4,13654,40,92360
+CUST17,Rohit Mehta,30,Male,Rural,Undergraduate,Doctor,1469479,Single,Microwave,Electronics,10,9,Phone,High,2207,8,9.7,13436,24,52968
+CUST18,Sneha Kapoor,54,Female,Urban,Undergraduate,Marketing Manager,645651,Widowed,Wrist Watch,Electronics,1,1,Social,High,1674,8,7,7270,31,51894
+CUST19,Pooja Desai,20,Female,Rural,PhD,Marketing Manager,978435,Divorced,Headphones,Electronics,9,8,Email,High,4250,7,6.5,19982,44,187000
+CUST20,Rajesh Yadav,41,Male,Urban,Graduate,Consultant,312630,Divorced,Sofa,Furniture,4,5,Phone,Medium,3980,2,4.7,37450,50,199000
+CUST21,Suresh Nair,53,Male,Rural,Post Graduate,Marketing Manager,1401368,Single,Smartphone,Fashion,5,6,Phone,Low,4636,6,7.5,44432,30,139080
+CUST22,Simran Kaur,29,Female,Urban,PhD,IT Professional,1359637,Single,Refrigerator,Electronics,6,2,Email,High,2744,3,2,12989,1,2744
+CUST23,Sneha Kapoor,37,Female,Urban,Undergraduate,Engineer,1353937,Married,Sofa,Electronics,0,0,Phone,Medium,4237,3,8.1,37593,45,190665
+CUST24,Meera Joshi,36,Female,Rural,Post Graduate,Farmer,1082738,Widowed,Wrist Watch,Accessories,5,10,Phone,Medium,919,8,5.6,22241,8,7352
+CUST25,Rohit Mehta,29,Male,Rural,PhD,Farmer,713600,Widowed,Laptop,Accessories,4,5,Email,High,2979,9,6.2,22968,15,44685
+CUST26,Sneha Kapoor,45,Female,Rural,Post Graduate,Sales Executive,786269,Single,Smartphone,Accessories,5,7,Email,Low,2067,9,7.6,36336,7,14469
+CUST27,Simran Kaur,55,Female,Rural,Undergraduate,Doctor,1259346,Married,Refrigerator,Home Appliances,10,7,Phone,Medium,523,8,8.8,26037,30,15690
+CUST28,Sneha Kapoor,55,Female,Urban,Post Graduate,Consultant,1158404,Widowed,Wrist Watch,Home Appliances,4,7,Email,Medium,2695,9,3.6,26863,6,16170
+CUST29,Mohit Agarwal,31,Male,Rural,Graduate,Small Business Owner,606251,Divorced,Refrigerator,Accessories,9,3,Email,High,4420,9,9.5,22185,40,176800
+CUST30,Suresh Nair,38,Male,Urban,Graduate,Small Business Owner,928759,Single,Sofa,Home Appliances,3,9,Phone,High,4166,3,7.9,47263,40,166640
+CUST31,Shreya Sen,51,Female,Rural,Post Graduate,Engineer,214973,Married,Shoes,Electronics,3,2,Social,Medium,4687,4,7.4,49295,39,182793
+CUST32,Neha Bhatia,24,Female,Urban,PhD,Engineer,1211314,Divorced,Smartphone,Fashion,1,8,Social,Low,2846,2,9.6,24245,10,28460
+CUST33,Pooja Desai,27,Female,Urban,Undergraduate,Consultant,649245,Widowed,Shoes,Furniture,5,8,Phone,Low,2222,8,8.7,42656,34,75548
+CUST34,Priya Verma,24,Female,Rural,PhD,Sales Executive,759870,Married,Headphones,Electronics,10,7,Phone,Medium,2478,6,10,43321,43,106554
+CUST35,Kavita Pillai,39,Female,Urban,Graduate,Engineer,1137572,Single,Laptop,Home Appliances,3,4,Email,Low,4341,7,6.6,20795,28,121548
+CUST36,Vikram Singh,33,Male,Rural,Graduate,Consultant,1260913,Divorced,Handbag,Furniture,8,2,Email,Medium,1774,4,3.5,46302,24,42576
+CUST37,Vikram Singh,52,Male,Urban,Graduate,Sales Executive,1472841,Divorced,Refrigerator,Home Appliances,7,1,Phone,Low,2281,5,8.3,20875,5,11405
+CUST38,Mohit Agarwal,44,Male,Urban,Graduate,Teacher,859525,Single,Wrist Watch,Electronics,4,3,Social,Medium,1830,9,1.1,46019,16,29280
+CUST39,Kavita Pillai,52,Female,Rural,Graduate,Teacher,735818,Married,Microwave,Fashion,3,10,Social,High,3630,7,5.1,38026,19,68970
+CUST40,Manish Kumar,32,Male,Rural,PhD,Sales Executive,830243,Married,Headphones,Furniture,9,1,Phone,Low,4716,4,2.1,31752,50,235800
+CUST41,Ritika Malhotra,37,Female,Urban,PhD,Engineer,658435,Divorced,T-shirt,Home Appliances,3,0,Email,Medium,2449,6,7.6,25907,6,14694
+CUST42,Shreya Sen,24,Female,Urban,PhD,Engineer,341900,Married,Headphones,Home Appliances,8,9,Email,Medium,3644,3,2.1,39582,38,138472
+CUST43,Pooja Desai,21,Female,Rural,Post Graduate,Sales Executive,248945,Divorced,Refrigerator,Fashion,0,8,Email,High,2428,2,1,40455,36,87408
+CUST44,Ananya Rao,30,Female,Urban,Undergraduate,Teacher,835754,Divorced,Shoes,Electronics,9,1,Social,Low,3829,4,8.4,12894,20,76580
+CUST45,Vikram Singh,36,Male,Rural,Undergraduate,Small Business Owner,228265,Married,Refrigerator,Electronics,6,2,Phone,Low,1986,7,8.8,27797,13,25818
+CUST46,Manish Kumar,53,Male,Rural,Undergraduate,Small Business Owner,1108037,Single,Smartphone,Furniture,2,5,Social,Medium,3451,1,6.2,33734,14,48314
+CUST47,Rohit Mehta,55,Male,Rural,Undergraduate,Doctor,550213,Divorced,Laptop,Fashion,4,7,Social,Low,847,3,4.4,37752,5,4235
+CUST48,Mohit Agarwal,55,Male,Rural,Post Graduate,Marketing Manager,896325,Widowed,Wrist Watch,Accessories,9,2,Email,Low,2133,5,2.8,23593,13,27729
+CUST49,Neha Bhatia,30,Female,Urban,PhD,Consultant,1143504,Married,Wrist Watch,Fashion,5,3,Social,High,1757,6,5.6,41235,27,47439
+CUST50,Rohit Mehta,26,Male,Rural,Post Graduate,Small Business Owner,551749,Widowed,Refrigerator,Electronics,3,3,Social,Medium,1695,9,7.8,41589,8,13560
+CUST51,Meera Joshi,22,Female,Urban,Graduate,Doctor,1466031,Widowed,Sofa,Furniture,4,1,Email,Low,4637,1,7.1,9671,28,129836
+CUST52,Sneha Kapoor,42,Female,Rural,Post Graduate,Sales Executive,645607,Widowed,T-shirt,Electronics,9,1,Social,Medium,1523,7,5.6,44423,41,62443
+CUST53,Meera Joshi,35,Female,Rural,Undergraduate,Doctor,384690,Divorced,Headphones,Electronics,0,10,Phone,Medium,2203,8,7.7,6469,43,94729
+CUST54,Manish Kumar,54,Male,Rural,Post Graduate,IT Professional,299035,Widowed,T-shirt,Home Appliances,2,7,Phone,High,803,4,6.9,35027,7,5621
+CUST55,Mohit Agarwal,44,Male,Rural,Graduate,Student,839873,Single,Shoes,Accessories,9,0,Phone,Medium,626,4,5.3,43410,4,2504
+CUST56,Rohit Mehta,27,Male,Rural,Undergraduate,Farmer,395404,Married,Wrist Watch,Accessories,4,1,Email,Medium,940,5,9.7,8387,12,11280
+CUST57,Shreya Sen,36,Female,Rural,Undergraduate,Small Business Owner,517463,Married,Laptop,Furniture,3,2,Email,High,2362,9,1,39764,31,73222
+CUST58,Suresh Nair,30,Male,Rural,Post Graduate,Doctor,1017676,Widowed,Sofa,Fashion,10,0,Social,High,3906,1,4,9439,22,85932
+CUST59,Kavita Pillai,26,Female,Urban,Undergraduate,Engineer,1230122,Single,Headphones,Furniture,8,3,Email,Low,503,5,3.8,17159,43,21629
+CUST60,Aarav Sharma,55,Male,Urban,Undergraduate,Small Business Owner,863217,Single,Smartphone,Home Appliances,2,7,Phone,Low,1972,4,9.3,6220,12,23664
+CUST61,Sneha Kapoor,35,Female,Rural,Post Graduate,Teacher,1101714,Widowed,Refrigerator,Electronics,9,4,Email,Low,2319,2,8.7,20796,1,2319
+CUST62,Anil Verma,31,Male,Urban,Post Graduate,Consultant,838324,Divorced,Handbag,Accessories,10,7,Social,Medium,808,5,1.5,10957,7,5656
+CUST63,Rohit Mehta,30,Male,Urban,Graduate,Engineer,703370,Single,Headphones,Home Appliances,10,4,Social,Medium,2707,8,2.3,49599,18,48726
+CUST64,Suresh Nair,38,Male,Urban,PhD,Marketing Manager,812893,Widowed,Smartphone,Home Appliances,4,4,Email,Medium,883,3,2.2,8128,46,40618
+CUST65,Kavita Pillai,46,Female,Urban,Graduate,Student,1469646,Divorced,Smartphone,Electronics,3,8,Email,Low,4936,9,3.8,28784,42,207312
+CUST66,Anil Verma,46,Male,Urban,Post Graduate,Teacher,976001,Married,Refrigerator,Electronics,10,2,Phone,Medium,1452,0,9.7,37729,37,53724
+CUST67,Ritika Malhotra,53,Female,Rural,Post Graduate,Small Business Owner,415325,Widowed,Smartphone,Home Appliances,10,3,Social,High,3903,9,4.4,13250,15,58545
+CUST68,Priya Verma,20,Female,Urban,PhD,Marketing Manager,790596,Single,Headphones,Furniture,8,1,Email,High,640,5,3.2,17081,17,10880
+CUST69,Neha Bhatia,51,Female,Urban,Undergraduate,Doctor,435310,Single,Headphones,Home Appliances,2,3,Social,Medium,1526,4,2.1,11145,39,59514
+CUST70,Sneha Kapoor,28,Female,Urban,Post Graduate,IT Professional,1025947,Widowed,Shoes,Accessories,6,3,Email,Low,1312,5,7.4,17740,50,65600
+CUST71,Pooja Desai,25,Female,Urban,PhD,IT Professional,679478,Widowed,Headphones,Electronics,1,3,Phone,Medium,1691,3,8.7,10305,19,32129
+CUST72,Shreya Sen,48,Female,Urban,PhD,Consultant,299842,Married,Microwave,Fashion,1,9,Social,Low,3333,7,9.6,41431,37,123321
+CUST73,Manish Kumar,42,Male,Rural,PhD,Teacher,796595,Single,Shoes,Furniture,4,2,Email,High,4576,5,4.7,35347,34,155584
+CUST74,Suresh Nair,21,Male,Rural,Post Graduate,Marketing Manager,535050,Divorced,Microwave,Home Appliances,6,2,Social,Low,3332,1,1.4,37073,25,83300
+CUST75,Rajesh Yadav,30,Male,Urban,Graduate,Consultant,483954,Married,Sofa,Accessories,5,1,Email,Low,3943,9,4.5,10934,41,161663
+CUST76,Neha Bhatia,29,Female,Rural,Graduate,Marketing Manager,1383847,Married,Shoes,Accessories,8,2,Email,High,4545,7,3.7,23916,26,118170
+CUST77,Ritika Malhotra,22,Female,Urban,PhD,Doctor,1237034,Divorced,Microwave,Fashion,0,8,Social,Medium,4142,5,10,20073,38,157396
+CUST78,Shreya Sen,28,Female,Urban,Graduate,Student,680808,Single,T-shirt,Home Appliances,9,1,Phone,Medium,884,5,5.8,22372,41,36244
+CUST79,Kavita Pillai,40,Female,Urban,Post Graduate,Farmer,757035,Married,Shoes,Furniture,6,6,Phone,High,3325,6,7.7,49008,44,146300
+CUST80,Ritika Malhotra,47,Female,Urban,Post Graduate,Engineer,1050685,Divorced,Headphones,Electronics,0,2,Email,Medium,4373,4,1.7,46029,28,122444
+CUST81,Shreya Sen,39,Female,Urban,Post Graduate,Consultant,1430387,Divorced,Smartphone,Furniture,5,10,Email,Medium,1451,3,2.5,31509,22,31922
+CUST82,Neha Bhatia,26,Female,Rural,Undergraduate,Sales Executive,265620,Married,Handbag,Furniture,7,5,Phone,Medium,3897,5,5.2,9136,33,128601
+CUST83,Simran Kaur,46,Female,Rural,Post Graduate,Doctor,632821,Single,Microwave,Electronics,0,5,Social,Medium,3652,6,5.5,29995,39,142428
+CUST84,Deepak Chauhan,33,Male,Rural,Undergraduate,Marketing Manager,998888,Single,Shoes,Fashion,0,6,Email,Low,1451,6,6.7,32127,38,55138
+CUST85,Vikram Singh,52,Male,Urban,PhD,Marketing Manager,200558,Divorced,Microwave,Fashion,5,10,Social,Low,803,5,8.9,21199,49,39347
+CUST86,Ananya Rao,23,Female,Rural,Post Graduate,Marketing Manager,514151,Divorced,Refrigerator,Fashion,10,0,Email,High,2722,3,1.1,13041,11,29942
+CUST87,Karan Kapoor,52,Male,Rural,Undergraduate,IT Professional,1174812,Widowed,Wrist Watch,Electronics,8,6,Phone,High,3860,9,4.9,20692,30,115800
+CUST88,Ritika Malhotra,21,Female,Rural,Graduate,Small Business Owner,1345915,Married,Wrist Watch,Electronics,6,7,Email,Low,1539,9,8.5,45954,8,12312
+CUST89,Anil Verma,36,Male,Rural,PhD,Marketing Manager,259049,Single,Laptop,Home Appliances,3,6,Phone,Low,1955,1,5,14075,44,86020
+CUST90,Ritika Malhotra,43,Female,Urban,Undergraduate,Sales Executive,210784,Widowed,Smartphone,Accessories,6,9,Email,High,4523,3,4.4,32419,11,49753
+CUST91,Aarav Sharma,23,Male,Urban,Post Graduate,Marketing Manager,285925,Divorced,Headphones,Electronics,8,6,Phone,Low,657,2,1.1,7114,13,8541
+CUST92,Karan Kapoor,33,Male,Urban,Undergraduate,Consultant,886553,Married,Refrigerator,Electronics,4,8,Social,Medium,2779,9,7.9,29109,43,119497
+CUST93,Priya Verma,43,Female,Urban,Undergraduate,Consultant,404634,Divorced,Smartphone,Electronics,5,4,Social,Medium,1565,0,5.1,34912,18,28170
+CUST94,Ananya Rao,45,Female,Rural,Graduate,Small Business Owner,380881,Widowed,Shoes,Accessories,8,1,Email,Low,931,1,5.8,43095,10,9310
+CUST95,Neha Bhatia,22,Female,Rural,Post Graduate,Doctor,1483679,Divorced,Wrist Watch,Fashion,1,4,Email,Medium,2807,8,5.2,24565,35,98245
+CUST96,Mohit Agarwal,51,Male,Urban,Undergraduate,Consultant,391434,Divorced,Handbag,Electronics,6,8,Social,High,1107,5,1.5,5455,35,38745
+CUST97,Sneha Kapoor,40,Female,Rural,Graduate,Engineer,1483976,Single,Wrist Watch,Fashion,4,7,Social,Medium,2112,3,8.9,46655,27,57024
+CUST98,Rohit Mehta,28,Male,Rural,Graduate,IT Professional,1172004,Married,Microwave,Furniture,7,3,Social,Low,1506,5,5.5,42731,18,27108
+CUST99,Priya Verma,36,Female,Rural,PhD,Sales Executive,1027673,Widowed,Shoes,Furniture,2,7,Email,Medium,2283,5,4.1,29451,22,50226
+CUST100,Kavita Pillai,33,Female,Urban,Post Graduate,Small Business Owner,354673,Married,Smartphone,Electronics,8,3,Email,Medium,4697,4,7.4,6758,4,18788
