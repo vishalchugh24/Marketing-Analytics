@@ -1,0 +1,501 @@
+CustomerID,Age,Gender,Income_Level,Health_Conscious_Score,Current_Beverage_Preference,Purchase_Intention,Willingness_To_Pay,Feature_Preference_Taste,Feature_Preference_EnergyBoost,Feature_Preference_Packaging,Feature_Preference_Price,Feature_Preference_Availability,Expected_Repeat_Purchase_Rate,Open_Ended_Feedback,Preferred_Channel,Proximity_to_Store,Channel_Satisfaction,Awareness_Source,Promo_Response,Ad_Recall_Score,Coupon_Usage(%),Brand_Engagement
+1,46,Male,Medium,8,Energy Drinks,0,83,1,3,3,3,2,0.85,Not sure if I would switch from my current brand.,Gym,1.27,2,Social Media,No,5,97,Medium
+2,32,Male,High,6,,1,129,5,3,1,4,4,0.55,Great taste but packaging could be improved.,Gym,3.41,5,Social Media,No,3,92,Medium
+3,25,Female,Low,5,Water,1,43,4,5,3,5,5,0.43,Price is a concern for students like me.,Gym,3.8,4,TV,Yes,1,23,Low
+4,38,Other,Low,6,Water,0,129,3,5,3,5,1,0.72,Not sure if I would switch from my current brand.,Convenience Store,2.98,1,Social Media,Yes,4,23,Medium
+5,36,Other,Low,2,Juices,0,143,5,5,4,1,3,0.23,I love the idea of a healthy energy drink.,Cafe,2.36,3,Word of Mouth,No,5,3,Low
+6,40,Female,High,1,Energy Drinks,1,48,4,2,4,3,1,0.53,Needs more flavor options.,Supermarket,2.06,5,In-store Promo,Yes,1,66,Medium
+7,28,Male,High,7,,1,44,5,3,3,2,3,0.44,Not really interested in energy drinks.,Convenience Store,1.74,1,Social Media,Yes,1,33,Low
+8,28,Male,Medium,7,,1,95,2,1,2,3,5,0.84,I love the idea of a healthy energy drink.,Gym,4.65,5,Word of Mouth,No,1,56,Low
+9,41,Female,Medium,10,Water,1,135,2,4,4,5,3,0.21,Love the natural ingredients.,Online Store,4.15,5,Online Ads,Yes,1,48,Low
+10,53,Female,Medium,10,Energy Drinks,0,123,1,5,5,4,4,0.59,Convenience of availability is key.,Gym,4.83,3,Word of Mouth,No,3,86,Low
+11,41,Male,Low,2,Juices,1,89,1,5,5,2,3,0.72,Needs more flavor options.,Cafe,0.62,4,In-store Promo,Yes,3,52,High
+12,20,Other,High,2,Energy Drinks,0,114,2,3,1,1,4,0.54,Too expensive compared to other drinks.,Gym,3.65,2,Word of Mouth,Yes,3,22,High
+13,39,Male,Medium,1,Soft Drinks,1,54,5,3,3,2,5,0.26,Not sure if I would switch from my current brand.,Online Store,4.69,4,TV,Yes,5,68,Medium
+14,19,Female,Medium,10,Energy Drinks,1,71,2,2,2,1,5,0.88,Too expensive compared to other drinks.,Cafe,0.91,3,In-store Promo,No,5,94,Low
+15,41,Male,Medium,8,Soft Drinks,1,67,1,2,1,2,1,0.56,I love the idea of a healthy energy drink.,Gym,0.33,3,Online Ads,Yes,5,52,Low
+16,47,Female,Low,8,Soft Drinks,0,61,2,5,3,1,4,0.63,Great taste but packaging could be improved.,Cafe,3.71,3,TV,Yes,2,61,Low
+17,19,Male,Low,1,Juices,0,144,2,3,4,1,4,0.37,Great taste but packaging could be improved.,Supermarket,2.87,1,Word of Mouth,No,5,40,Low
+18,38,Male,Medium,8,Water,1,56,5,1,5,2,2,0.54,Convenience of availability is key.,Supermarket,4.21,4,In-store Promo,Yes,3,56,High
+19,50,Male,Low,9,Energy Drinks,1,98,4,4,2,2,2,0.5,I love the idea of a healthy energy drink.,Gym,0.7,4,Online Ads,Yes,3,59,Low
+20,29,Female,Medium,4,Soft Drinks,1,129,1,3,5,1,2,0.25,Sounds great! Would definitely try.,Cafe,3.98,5,TV,No,2,53,Medium
+21,39,Female,Low,1,Energy Drinks,0,147,5,3,4,5,3,0.27,Needs more flavor options.,Online Store,1.01,5,Online Ads,Yes,2,69,Low
+22,42,Female,Medium,1,Water,1,110,2,2,3,2,2,0.79,Not sure if I would switch from my current brand.,Gym,0.82,5,Word of Mouth,No,5,100,Low
+23,44,Other,Low,3,Water,0,145,2,4,4,3,4,0.37,Great taste but packaging could be improved.,Supermarket,0.82,3,Online Ads,No,4,56,Medium
+24,45,Male,Medium,5,,1,96,4,5,4,4,3,0.34,Great taste but packaging could be improved.,Supermarket,4.07,4,Social Media,No,2,9,Medium
+25,33,Male,Medium,5,Water,0,65,1,3,5,1,5,0.55,Too expensive compared to other drinks.,Gym,3.33,3,TV,Yes,1,39,Low
+26,32,Female,Low,9,Juices,1,64,1,5,2,1,1,0.74,Too expensive compared to other drinks.,Cafe,2.62,1,Online Ads,No,3,6,Low
+27,20,Male,Medium,10,Soft Drinks,0,49,3,3,4,4,2,0.24,Not really interested in energy drinks.,Supermarket,1.79,5,Word of Mouth,Yes,1,37,Medium
+28,54,Other,Medium,2,,1,84,1,5,5,5,5,0.6,Love the natural ingredients.,Cafe,4.39,3,Word of Mouth,No,3,84,Low
+29,24,Male,Medium,2,Juices,1,122,4,4,2,4,4,0.28,Sounds great! Would definitely try.,Supermarket,1.96,3,Online Ads,Yes,3,60,Low
+30,38,Other,High,6,Energy Drinks,0,50,3,2,3,2,1,0.23,Too expensive compared to other drinks.,Supermarket,4.08,1,Word of Mouth,Yes,2,83,High
+31,26,Male,Medium,9,Soft Drinks,0,116,3,4,3,4,5,0.24,Too expensive compared to other drinks.,Convenience Store,2.2,2,In-store Promo,Yes,2,2,Medium
+32,35,Female,Low,1,Water,0,92,2,1,1,1,1,0.78,Needs more flavor options.,Supermarket,1.88,4,In-store Promo,No,1,50,Medium
+33,21,Female,Low,9,Soft Drinks,0,111,2,2,5,4,2,0.28,Not really interested in energy drinks.,Online Store,2.31,2,In-store Promo,No,3,85,Medium
+34,42,Other,Low,9,Energy Drinks,1,143,1,4,2,3,4,0.23,Too expensive compared to other drinks.,Gym,1.51,5,Social Media,Yes,1,46,Medium
+35,31,Male,Medium,9,,1,107,3,1,4,2,1,0.51,Not sure if I would switch from my current brand.,Gym,3.74,3,Online Ads,Yes,4,67,Medium
+36,26,Female,Low,5,,1,150,2,3,3,4,5,0.79,Needs more flavor options.,Cafe,2.51,1,Social Media,No,1,91,Medium
+37,43,Other,Medium,9,,1,134,4,3,2,1,2,0.38,Love the natural ingredients.,Supermarket,1.16,1,Word of Mouth,Yes,5,75,High
+38,19,Female,Medium,4,Water,1,67,2,5,5,2,2,0.5,I love the idea of a healthy energy drink.,Online Store,4.5,4,Social Media,Yes,1,37,Low
+39,37,Female,Medium,2,Juices,0,114,2,2,1,1,5,0.23,Needs more flavor options.,Cafe,1.92,2,Word of Mouth,No,5,35,Medium
+40,45,Female,Medium,6,Juices,0,146,3,3,3,5,5,0.51,I love the idea of a healthy energy drink.,Convenience Store,2.72,4,Word of Mouth,Yes,5,40,Medium
+41,24,Female,Low,4,Soft Drinks,1,104,3,2,2,3,1,0.6,Great taste but packaging could be improved.,Cafe,4.53,3,TV,No,5,68,High
+42,25,Female,Low,6,Water,1,88,5,3,2,5,3,0.6,Not really interested in energy drinks.,Cafe,3.12,4,In-store Promo,Yes,4,12,Medium
+43,52,Female,Medium,3,,0,86,4,5,2,3,2,0.43,Love the natural ingredients.,Supermarket,0.58,1,Word of Mouth,Yes,1,86,Medium
+44,31,Other,Medium,6,,0,91,3,4,5,4,1,0.42,Not really interested in energy drinks.,Convenience Store,4.7,1,TV,Yes,1,57,Low
+45,34,Male,Medium,2,Energy Drinks,1,141,1,5,5,2,5,0.27,Love the natural ingredients.,Cafe,3.14,5,In-store Promo,No,4,49,Medium
+46,53,Male,Medium,2,Energy Drinks,1,127,4,1,5,4,1,0.46,Not really interested in energy drinks.,Online Store,1.67,5,Word of Mouth,Yes,3,29,Low
+47,21,Other,Low,9,,0,93,4,3,4,3,5,0.27,Needs more flavor options.,Online Store,0.7,3,Word of Mouth,No,2,61,Medium
+48,19,Female,High,7,,1,99,3,1,2,3,4,0.74,Not really interested in energy drinks.,Gym,3.97,2,Social Media,Yes,1,100,Low
+49,23,Female,Medium,3,Water,1,96,4,1,3,3,5,0.88,Price is a concern for students like me.,Convenience Store,3.1,4,Social Media,No,2,24,Medium
+50,21,Female,Medium,1,Juices,0,86,3,2,5,1,5,0.88,Love the natural ingredients.,Convenience Store,2.67,3,In-store Promo,Yes,4,26,Low
+51,46,Male,Low,8,Energy Drinks,0,70,2,3,5,2,5,0.81,I love the idea of a healthy energy drink.,Gym,4.47,5,Word of Mouth,Yes,3,50,Medium
+52,35,Male,Medium,6,Juices,1,144,5,1,2,4,3,0.62,Love the natural ingredients.,Cafe,3.94,4,Online Ads,No,3,77,High
+53,43,Female,Medium,7,Water,1,85,2,4,5,4,5,0.69,Great taste but packaging could be improved.,Convenience Store,0.76,5,Social Media,Yes,3,56,Low
+54,51,Male,Low,9,,0,65,3,1,4,5,2,0.4,Not sure if I would switch from my current brand.,Online Store,1.56,4,In-store Promo,Yes,4,46,Medium
+55,27,Female,High,5,Juices,1,44,3,4,4,3,2,0.64,Price is a concern for students like me.,Online Store,1.24,2,Word of Mouth,No,5,99,Medium
+56,53,Male,Low,1,,1,123,2,2,5,3,1,0.52,Convenience of availability is key.,Supermarket,3.72,3,Word of Mouth,Yes,5,38,Low
+57,31,Other,High,10,,1,91,1,1,2,3,3,0.54,Love the natural ingredients.,Convenience Store,0.17,4,Online Ads,No,2,15,High
+58,48,Other,Medium,7,Soft Drinks,1,144,1,5,2,4,1,0.73,Too expensive compared to other drinks.,Cafe,2.85,1,In-store Promo,Yes,5,21,Low
+59,32,Female,Low,5,Juices,1,114,1,2,2,5,2,0.4,Needs more flavor options.,Gym,3.81,1,Word of Mouth,No,5,84,Medium
+60,25,Female,Medium,3,Juices,1,93,3,4,1,1,2,0.42,Needs more flavor options.,Gym,4.38,4,Social Media,Yes,3,53,Medium
+61,31,Male,High,9,,1,72,4,2,5,2,4,0.85,Not really interested in energy drinks.,Cafe,1.71,4,Online Ads,Yes,3,20,Medium
+62,40,Female,Medium,1,Water,1,89,3,1,2,1,5,0.24,Not really interested in energy drinks.,Supermarket,4.11,4,In-store Promo,No,2,71,Medium
+63,38,Female,High,1,Soft Drinks,1,77,4,3,4,4,2,0.54,Needs more flavor options.,Gym,0.55,1,Online Ads,No,1,15,Low
+64,33,Male,Medium,1,,1,66,2,3,3,3,1,0.84,Sounds great! Would definitely try.,Convenience Store,4.23,1,Social Media,Yes,2,58,Low
+65,35,Other,Medium,3,Energy Drinks,0,137,5,4,3,2,1,0.63,Price is a concern for students like me.,Supermarket,0.64,4,In-store Promo,Yes,2,30,High
+66,41,Female,High,6,Energy Drinks,1,54,4,4,2,4,5,0.58,Price is a concern for students like me.,Convenience Store,1.99,5,Online Ads,No,4,41,Medium
+67,43,Other,Low,10,Soft Drinks,1,135,1,3,3,4,5,0.37,I love the idea of a healthy energy drink.,Online Store,3.99,5,TV,Yes,4,73,High
+68,42,Female,Medium,3,Water,0,100,3,4,3,4,4,0.44,Love the natural ingredients.,Supermarket,0.75,2,Social Media,No,2,31,High
+69,46,Female,Low,8,,1,60,2,2,1,2,3,0.8,Convenience of availability is key.,Gym,1.15,3,Social Media,No,2,58,High
+70,32,Male,High,10,Juices,1,85,1,5,4,2,1,0.59,Needs more flavor options.,Supermarket,3.61,5,Social Media,Yes,2,33,Medium
+71,18,Other,High,2,Soft Drinks,0,108,2,5,4,5,5,0.56,Love the natural ingredients.,Supermarket,3.6,1,TV,Yes,5,8,Medium
+72,42,Female,Low,9,Water,0,45,5,2,1,5,1,0.27,Price is a concern for students like me.,Supermarket,3.21,5,TV,No,4,80,High
+73,24,Male,Medium,3,Juices,0,77,3,5,1,1,5,0.21,Great taste but packaging could be improved.,Supermarket,3.47,2,Word of Mouth,Yes,2,10,Medium
+74,26,Male,High,5,Energy Drinks,0,101,3,1,3,2,2,0.87,Needs more flavor options.,Convenience Store,2.71,2,Online Ads,Yes,3,95,Low
+75,41,Male,Low,10,Energy Drinks,1,125,5,2,5,2,1,0.46,Love the natural ingredients.,Online Store,1.26,3,Word of Mouth,No,3,9,High
+76,18,Female,Medium,8,Juices,0,101,3,4,3,2,2,0.62,Price is a concern for students like me.,Cafe,1.73,5,Online Ads,Yes,5,85,High
+77,25,Other,High,2,Soft Drinks,1,121,4,2,1,5,1,0.26,Not sure if I would switch from my current brand.,Supermarket,0.91,1,TV,No,5,16,Medium
+78,41,Male,Low,6,Energy Drinks,1,117,2,3,4,4,3,0.68,Price is a concern for students like me.,Gym,4.54,1,TV,Yes,1,67,Low
+79,28,Female,Medium,5,,1,113,1,4,3,3,4,0.85,Not really interested in energy drinks.,Supermarket,2.92,4,Word of Mouth,Yes,1,47,Medium
+80,34,Male,Low,10,Juices,1,85,5,3,5,5,2,0.6,Too expensive compared to other drinks.,Gym,2,1,In-store Promo,Yes,1,51,High
+81,25,Other,High,9,Juices,0,52,4,4,3,2,5,0.29,Sounds great! Would definitely try.,Convenience Store,2.31,3,Word of Mouth,Yes,5,24,High
+82,52,Female,High,5,Energy Drinks,1,134,1,5,2,5,3,0.61,Sounds great! Would definitely try.,Gym,4.74,3,Online Ads,Yes,5,20,Low
+83,52,Female,High,2,Soft Drinks,0,133,1,2,3,1,1,0.74,Not really interested in energy drinks.,Cafe,0.77,1,Word of Mouth,Yes,5,100,Low
+84,50,Female,Medium,5,,1,42,5,1,1,2,2,0.48,Not really interested in energy drinks.,Online Store,2.93,1,Social Media,No,3,64,High
+85,22,Male,High,4,Soft Drinks,1,133,4,4,4,1,1,0.82,Needs more flavor options.,Gym,2.53,4,Online Ads,Yes,5,62,Medium
+86,45,Male,High,7,Water,0,45,1,4,4,2,1,0.65,Not sure if I would switch from my current brand.,Gym,3.06,1,Online Ads,Yes,3,88,Medium
+87,24,Male,Medium,6,Water,0,132,1,3,1,5,1,0.83,Not sure if I would switch from my current brand.,Online Store,0.09,4,In-store Promo,Yes,1,50,High
+88,26,Female,High,2,Energy Drinks,1,47,4,5,2,4,4,0.64,Needs more flavor options.,Cafe,4.36,4,TV,Yes,1,35,Low
+89,25,Female,Low,5,Energy Drinks,1,83,3,3,1,3,4,0.29,Love the natural ingredients.,Supermarket,4.66,1,Online Ads,Yes,1,80,Medium
+90,29,Other,Medium,7,Energy Drinks,1,148,1,3,3,1,5,0.42,Needs more flavor options.,Gym,2.83,2,TV,Yes,2,87,Low
+91,51,Other,Low,7,Water,0,146,2,5,1,5,2,0.34,Convenience of availability is key.,Online Store,3.48,2,Word of Mouth,Yes,2,65,Medium
+92,50,Female,Low,5,Soft Drinks,1,147,4,1,1,4,3,0.84,Convenience of availability is key.,Convenience Store,4.61,4,Social Media,Yes,4,14,High
+93,40,Female,Low,9,Soft Drinks,0,72,1,3,2,5,3,0.73,Sounds great! Would definitely try.,Online Store,3.54,1,In-store Promo,Yes,4,95,Medium
+94,41,Other,Medium,4,Energy Drinks,1,120,5,3,3,1,3,0.67,Price is a concern for students like me.,Convenience Store,0.76,2,TV,No,4,38,High
+95,54,Female,Medium,3,,1,114,2,4,5,3,1,0.41,Needs more flavor options.,Cafe,2.88,1,Online Ads,Yes,2,69,Medium
+96,52,Male,Medium,4,Soft Drinks,1,116,1,5,5,5,4,0.33,Needs more flavor options.,Supermarket,3.03,1,TV,Yes,2,0,Medium
+97,39,Female,Low,5,Water,1,89,2,2,4,2,2,0.73,Love the natural ingredients.,Online Store,2.12,1,Online Ads,No,4,22,Low
+98,44,Male,Medium,6,Juices,0,50,2,1,1,4,1,0.53,I love the idea of a healthy energy drink.,Gym,3.68,5,TV,Yes,4,38,Medium
+99,52,Other,Medium,3,Juices,1,134,3,1,4,5,4,0.36,Sounds great! Would definitely try.,Cafe,4.67,1,Online Ads,No,5,56,Medium
+100,18,Female,Medium,2,Juices,1,67,2,5,2,4,4,0.63,Sounds great! Would definitely try.,Online Store,4.63,5,Word of Mouth,Yes,4,80,Low
+101,52,Male,Medium,4,,0,147,3,4,5,2,2,0.23,Sounds great! Would definitely try.,Gym,2.25,4,Online Ads,Yes,5,33,Medium
+102,54,Female,Medium,5,Energy Drinks,1,109,4,4,1,3,2,0.43,Price is a concern for students like me.,Online Store,0.57,2,Online Ads,Yes,3,40,Medium
+103,31,Female,High,4,Water,0,80,3,5,2,3,2,0.53,Not really interested in energy drinks.,Convenience Store,4.92,2,Social Media,Yes,2,92,High
+104,20,Male,Medium,3,,1,55,5,4,2,2,1,0.3,Great taste but packaging could be improved.,Online Store,4.19,2,Online Ads,No,4,72,Medium
+105,18,Male,Low,8,Water,1,107,1,1,1,4,5,0.89,I love the idea of a healthy energy drink.,Online Store,0.62,2,Social Media,Yes,2,12,High
+106,22,Female,Low,10,Water,1,138,4,1,2,5,2,0.35,Price is a concern for students like me.,Online Store,4.6,2,In-store Promo,No,2,69,Low
+107,43,Female,High,4,Energy Drinks,0,87,4,2,1,2,5,0.29,Convenience of availability is key.,Cafe,4.35,2,Social Media,Yes,2,5,Low
+108,31,Female,Low,2,Juices,1,95,5,5,1,1,1,0.34,Love the natural ingredients.,Online Store,2.59,2,Word of Mouth,Yes,3,83,Medium
+109,44,Female,High,2,Energy Drinks,1,103,3,3,3,4,5,0.74,Not really interested in energy drinks.,Gym,2.96,4,Social Media,Yes,1,51,Medium
+110,26,Female,Medium,1,,1,98,1,3,4,3,3,0.5,Convenience of availability is key.,Convenience Store,2,1,In-store Promo,Yes,4,2,Low
+111,32,Female,High,4,,1,129,3,2,2,2,5,0.6,Not really interested in energy drinks.,Convenience Store,0.27,3,Word of Mouth,Yes,1,80,High
+112,32,Female,Medium,10,,0,101,2,2,2,3,2,0.21,Not sure if I would switch from my current brand.,Online Store,1.68,5,TV,No,1,62,High
+113,43,Female,High,9,Energy Drinks,1,115,3,4,3,4,1,0.22,Sounds great! Would definitely try.,Cafe,4.01,3,TV,No,1,48,Medium
+114,30,Male,Medium,7,Water,1,50,4,2,3,3,2,0.51,Not really interested in energy drinks.,Cafe,0.02,3,Social Media,Yes,2,75,Low
+115,49,Male,Medium,10,Water,1,140,1,2,3,2,3,0.77,Too expensive compared to other drinks.,Gym,1.67,1,Social Media,No,5,46,High
+116,49,Male,Medium,7,Soft Drinks,1,128,3,3,5,4,2,0.82,Sounds great! Would definitely try.,Online Store,1.99,1,In-store Promo,No,2,54,Medium
+117,21,Female,Medium,7,,1,57,1,4,5,1,2,0.26,Sounds great! Would definitely try.,Convenience Store,2.69,1,In-store Promo,No,2,63,High
+118,47,Female,Medium,8,Water,1,58,1,2,5,2,2,0.58,Love the natural ingredients.,Cafe,4.6,2,Online Ads,Yes,1,64,High
+119,54,Female,High,1,Soft Drinks,1,126,2,2,1,5,4,0.84,I love the idea of a healthy energy drink.,Online Store,1.73,4,In-store Promo,No,2,80,High
+120,40,Male,High,10,Water,0,94,2,4,2,2,3,0.47,Convenience of availability is key.,Cafe,1.73,2,Online Ads,Yes,1,66,Medium
+121,32,Male,Medium,10,,0,141,4,5,4,4,2,0.78,Not really interested in energy drinks.,Cafe,3.69,4,Word of Mouth,No,5,89,Low
+122,46,Male,Medium,8,Juices,0,121,5,4,1,2,2,0.29,Not really interested in energy drinks.,Convenience Store,2.26,4,Social Media,Yes,4,14,Medium
+123,53,Male,Medium,4,,0,65,1,3,2,1,2,0.85,Not sure if I would switch from my current brand.,Supermarket,1.12,3,Word of Mouth,Yes,1,99,Medium
+124,30,Female,Medium,4,Energy Drinks,1,45,5,5,2,1,1,0.73,Sounds great! Would definitely try.,Gym,2.26,3,In-store Promo,No,5,31,High
+125,49,Male,Low,4,Water,1,43,4,1,3,5,4,0.86,Needs more flavor options.,Gym,0.7,4,Word of Mouth,Yes,4,95,Low
+126,24,Male,Low,6,Water,1,147,1,4,3,3,1,0.67,Great taste but packaging could be improved.,Convenience Store,0.88,4,Word of Mouth,No,3,67,Low
+127,39,Other,Medium,7,Energy Drinks,1,68,1,3,1,4,4,0.45,Needs more flavor options.,Cafe,2.49,2,Word of Mouth,No,1,17,High
+128,45,Male,Low,6,Energy Drinks,1,98,5,5,3,4,2,0.86,Not really interested in energy drinks.,Online Store,2.09,2,In-store Promo,No,1,82,High
+129,19,Female,Low,1,Juices,1,137,3,4,2,3,3,0.39,Needs more flavor options.,Cafe,4.57,3,Word of Mouth,Yes,3,42,High
+130,23,Female,Low,8,Water,1,56,2,2,3,1,5,0.43,Love the natural ingredients.,Convenience Store,1.81,1,Online Ads,No,3,34,High
+131,45,Male,Low,10,Water,1,146,3,4,5,1,5,0.69,Too expensive compared to other drinks.,Gym,2.9,4,In-store Promo,Yes,1,77,Medium
+132,45,Female,Low,7,Juices,1,82,5,1,3,2,2,0.74,Not really interested in energy drinks.,Cafe,3.16,2,Word of Mouth,Yes,3,57,Medium
+133,37,Female,High,6,Soft Drinks,0,119,2,4,2,5,1,0.85,Not really interested in energy drinks.,Gym,0.07,3,In-store Promo,No,2,32,High
+134,47,Other,Medium,6,Juices,0,105,3,5,1,5,3,0.34,Too expensive compared to other drinks.,Online Store,3.32,2,TV,Yes,4,13,Medium
+135,28,Male,Medium,5,,1,73,2,5,4,5,4,0.76,Convenience of availability is key.,Gym,0.89,4,Online Ads,Yes,4,33,Medium
+136,45,Other,Medium,6,Water,1,47,1,4,3,2,2,0.72,Too expensive compared to other drinks.,Gym,4.81,4,Word of Mouth,No,4,60,Low
+137,42,Female,Low,9,Energy Drinks,0,52,3,5,2,5,3,0.24,Needs more flavor options.,Supermarket,0.74,5,TV,Yes,2,3,Medium
+138,50,Male,High,10,,1,145,2,2,4,3,3,0.47,Love the natural ingredients.,Supermarket,2.07,1,TV,Yes,3,87,High
+139,18,Female,Medium,9,Water,1,47,2,4,4,2,4,0.4,Not sure if I would switch from my current brand.,Supermarket,0.43,5,In-store Promo,No,5,58,Low
+140,44,Other,Low,10,Juices,0,133,2,2,5,3,3,0.41,Convenience of availability is key.,Gym,4.98,3,TV,Yes,3,28,Low
+141,30,Female,Medium,8,,0,135,3,2,4,2,1,0.89,Price is a concern for students like me.,Convenience Store,2.51,2,Online Ads,No,1,82,Medium
+142,20,Male,High,10,Water,1,139,4,3,2,5,1,0.65,Not sure if I would switch from my current brand.,Gym,2.98,3,Online Ads,No,4,5,Low
+143,23,Female,High,9,Soft Drinks,1,150,3,4,2,3,1,0.7,I love the idea of a healthy energy drink.,Convenience Store,0.34,4,Social Media,No,3,96,Low
+144,25,Male,Medium,10,Soft Drinks,0,133,5,5,3,3,3,0.88,I love the idea of a healthy energy drink.,Convenience Store,3.75,5,Online Ads,No,5,48,Medium
+145,44,Male,Medium,8,Energy Drinks,1,104,3,2,3,3,1,0.46,I love the idea of a healthy energy drink.,Supermarket,1.05,5,TV,Yes,1,39,High
+146,26,Male,Low,8,Water,1,82,2,3,3,2,4,0.76,I love the idea of a healthy energy drink.,Cafe,4.49,5,Online Ads,Yes,2,82,Medium
+147,54,Male,High,1,Soft Drinks,1,78,1,4,4,4,3,0.5,Love the natural ingredients.,Online Store,1.03,3,In-store Promo,No,2,64,Low
+148,50,Male,Low,10,Juices,0,120,3,4,4,5,5,0.81,Not sure if I would switch from my current brand.,Supermarket,0.95,4,Social Media,No,5,68,Low
+149,41,Male,High,5,Water,0,98,3,1,5,3,3,0.33,Sounds great! Would definitely try.,Supermarket,0.18,2,TV,Yes,1,26,Medium
+150,32,Female,Medium,4,Juices,1,123,2,1,3,4,4,0.86,Great taste but packaging could be improved.,Cafe,2.36,2,Social Media,Yes,4,79,Medium
+151,49,Male,Medium,2,Juices,1,127,1,2,1,5,5,0.35,Convenience of availability is key.,Online Store,2.82,3,TV,Yes,3,5,High
+152,49,Male,Medium,8,Soft Drinks,1,125,1,1,5,5,3,0.43,Price is a concern for students like me.,Gym,0.33,5,In-store Promo,Yes,1,12,Medium
+153,41,Female,Low,3,Water,0,132,5,2,1,3,1,0.73,Needs more flavor options.,Gym,3.88,1,Social Media,No,2,63,High
+154,29,Female,Low,4,,1,125,3,5,4,3,2,0.48,Not really interested in energy drinks.,Supermarket,2.27,3,Word of Mouth,Yes,5,61,Low
+155,19,Female,Low,7,Soft Drinks,0,83,1,2,5,2,2,0.63,I love the idea of a healthy energy drink.,Online Store,2.62,3,TV,No,5,98,Medium
+156,20,Male,Low,10,Soft Drinks,0,48,1,1,5,4,1,0.51,Price is a concern for students like me.,Supermarket,2.2,4,Word of Mouth,No,3,18,Low
+157,54,Male,Medium,9,Water,0,76,4,5,2,4,2,0.72,Not really interested in energy drinks.,Convenience Store,2,2,Social Media,Yes,5,75,High
+158,34,Male,Medium,2,Water,0,113,4,1,4,3,2,0.36,Great taste but packaging could be improved.,Supermarket,2.8,3,Word of Mouth,No,5,79,Medium
+159,19,Male,Low,3,Juices,1,75,1,2,4,5,1,0.24,Price is a concern for students like me.,Supermarket,0.78,3,Word of Mouth,Yes,1,42,Medium
+160,19,Male,High,4,Water,1,140,5,3,5,3,1,0.41,Not sure if I would switch from my current brand.,Gym,0.91,5,Social Media,Yes,4,73,Low
+161,45,Male,High,10,Juices,0,131,1,4,4,5,3,0.53,Price is a concern for students like me.,Gym,4.31,5,In-store Promo,No,3,88,Low
+162,40,Male,High,1,Soft Drinks,1,67,2,1,5,5,3,0.32,I love the idea of a healthy energy drink.,Gym,4.73,1,Word of Mouth,No,1,19,Medium
+163,54,Male,High,7,Energy Drinks,0,81,3,2,2,3,1,0.45,Great taste but packaging could be improved.,Convenience Store,1.87,4,Word of Mouth,No,4,94,Low
+164,49,Female,Low,2,,1,82,5,5,5,1,4,0.48,Needs more flavor options.,Gym,1.35,1,In-store Promo,Yes,1,67,Medium
+165,50,Male,Medium,5,Soft Drinks,1,124,2,1,4,4,2,0.24,Sounds great! Would definitely try.,Online Store,3.22,5,Word of Mouth,Yes,1,43,Low
+166,18,Male,Medium,1,Water,0,127,5,1,4,5,3,0.61,Too expensive compared to other drinks.,Cafe,2.04,2,Word of Mouth,No,5,22,Medium
+167,36,Female,Medium,3,,1,81,2,4,5,5,2,0.82,I love the idea of a healthy energy drink.,Online Store,0.13,5,Word of Mouth,Yes,4,1,High
+168,19,Female,Low,2,Energy Drinks,0,143,3,2,5,1,5,0.31,Not really interested in energy drinks.,Online Store,0.78,4,Online Ads,Yes,3,21,High
+169,43,Male,High,1,Energy Drinks,0,105,3,3,5,2,1,0.62,Great taste but packaging could be improved.,Gym,3.58,5,In-store Promo,Yes,3,56,High
+170,49,Female,Low,7,Juices,0,94,4,5,3,1,4,0.67,Not sure if I would switch from my current brand.,Cafe,3.29,4,Word of Mouth,No,4,100,Low
+171,23,Female,Low,5,,1,111,2,2,4,1,5,0.49,Love the natural ingredients.,Cafe,0.14,4,In-store Promo,Yes,5,71,Low
+172,49,Male,Medium,1,Juices,1,87,4,5,4,5,5,0.69,Great taste but packaging could be improved.,Cafe,1.11,4,TV,No,2,6,Medium
+173,21,Female,Medium,6,Soft Drinks,0,130,2,1,3,4,5,0.49,Not really interested in energy drinks.,Convenience Store,1.16,4,TV,No,1,77,Medium
+174,28,Other,Medium,5,,1,61,4,4,5,1,1,0.55,Too expensive compared to other drinks.,Gym,3.36,4,Word of Mouth,Yes,5,55,Medium
+175,34,Male,Low,3,Soft Drinks,1,140,3,4,2,2,3,0.21,Too expensive compared to other drinks.,Cafe,0.1,2,In-store Promo,Yes,4,66,Low
+176,41,Male,High,7,Juices,1,66,5,3,5,3,1,0.68,Convenience of availability is key.,Convenience Store,0.52,1,In-store Promo,Yes,1,15,Low
+177,22,Female,Low,10,,1,132,4,4,5,1,3,0.66,Sounds great! Would definitely try.,Supermarket,4,3,In-store Promo,No,3,82,Low
+178,51,Female,Low,9,Juices,1,106,2,1,3,1,5,0.23,Not really interested in energy drinks.,Supermarket,0.89,1,Online Ads,Yes,2,50,High
+179,23,Male,High,9,,0,147,2,3,4,2,5,0.46,Too expensive compared to other drinks.,Convenience Store,3.26,4,TV,Yes,3,81,Low
+180,39,Male,High,9,Juices,0,52,3,2,5,4,4,0.89,Convenience of availability is key.,Convenience Store,1.19,2,In-store Promo,Yes,4,79,Medium
+181,28,Male,High,2,Energy Drinks,1,84,2,4,4,1,3,0.49,Convenience of availability is key.,Gym,0.5,5,In-store Promo,No,1,71,Low
+182,33,Female,High,3,Juices,0,49,1,3,1,1,5,0.55,Convenience of availability is key.,Gym,1.22,2,Online Ads,Yes,4,96,Medium
+183,50,Female,Medium,7,Energy Drinks,1,139,5,1,4,4,2,0.84,Great taste but packaging could be improved.,Supermarket,3.61,4,Online Ads,No,1,11,Medium
+184,26,Male,Medium,5,Juices,1,48,4,5,2,2,4,0.7,Convenience of availability is key.,Cafe,4.28,2,In-store Promo,No,5,52,High
+185,23,Female,Low,2,,0,93,5,5,2,1,1,0.61,I love the idea of a healthy energy drink.,Supermarket,4.15,2,Social Media,Yes,2,74,High
+186,33,Female,Medium,3,,0,66,3,1,5,4,4,0.76,Not really interested in energy drinks.,Cafe,1.99,4,In-store Promo,No,5,4,Medium
+187,46,Male,Medium,10,,0,73,4,1,4,1,2,0.81,I love the idea of a healthy energy drink.,Cafe,3.34,2,In-store Promo,Yes,5,26,High
+188,20,Male,Low,6,Water,1,40,4,5,5,3,3,0.52,Love the natural ingredients.,Gym,1.02,3,Online Ads,No,4,11,High
+189,37,Female,Medium,7,Soft Drinks,1,71,1,3,3,5,1,0.53,Too expensive compared to other drinks.,Online Store,1.47,3,Online Ads,No,2,16,High
+190,53,Female,Medium,9,,0,128,3,5,2,3,1,0.47,Sounds great! Would definitely try.,Online Store,4.48,2,In-store Promo,No,1,5,High
+191,36,Female,Low,1,Energy Drinks,0,132,2,1,5,1,3,0.88,Convenience of availability is key.,Convenience Store,0.07,5,In-store Promo,Yes,1,96,Low
+192,43,Female,Low,7,,0,110,1,4,3,2,4,0.69,Not sure if I would switch from my current brand.,Gym,0.43,4,In-store Promo,Yes,3,4,Medium
+193,20,Male,Medium,8,Water,1,106,1,2,5,5,5,0.26,Not sure if I would switch from my current brand.,Cafe,1.04,3,Online Ads,Yes,1,56,Low
+194,36,Male,Low,3,Energy Drinks,0,123,5,4,4,3,4,0.8,Too expensive compared to other drinks.,Online Store,0.13,5,In-store Promo,Yes,4,27,Low
+195,37,Female,High,4,Water,1,59,5,4,4,4,2,0.54,Love the natural ingredients.,Cafe,0.91,2,In-store Promo,Yes,5,77,High
+196,49,Male,Medium,10,Energy Drinks,0,133,5,1,4,2,5,0.25,Not sure if I would switch from my current brand.,Online Store,2.92,5,Word of Mouth,Yes,5,68,Medium
+197,24,Male,Medium,6,Juices,0,74,1,5,4,3,4,0.58,I love the idea of a healthy energy drink.,Online Store,2.11,1,Social Media,Yes,5,58,High
+198,50,Male,Medium,10,Soft Drinks,1,138,2,3,1,4,3,0.49,Price is a concern for students like me.,Online Store,4.46,3,TV,Yes,2,32,High
+199,35,Male,High,7,Soft Drinks,1,142,4,4,3,1,2,0.81,Great taste but packaging could be improved.,Gym,4.09,2,Social Media,No,1,61,High
+200,18,Male,Medium,4,Water,1,130,5,5,3,4,2,0.34,Needs more flavor options.,Supermarket,1.71,4,Word of Mouth,Yes,4,49,High
+201,28,Male,Medium,8,Soft Drinks,1,129,2,3,4,3,2,0.78,Not sure if I would switch from my current brand.,Cafe,1.3,2,TV,Yes,2,18,Low
+202,45,Male,Medium,5,Water,0,117,3,4,1,3,5,0.59,Sounds great! Would definitely try.,Gym,1.9,4,In-store Promo,Yes,3,85,Low
+203,42,Male,Low,1,Water,1,56,5,3,4,1,1,0.24,Convenience of availability is key.,Gym,2.95,2,Word of Mouth,Yes,4,68,Medium
+204,40,Female,High,4,Water,0,57,4,5,1,4,5,0.88,Sounds great! Would definitely try.,Gym,1.34,5,In-store Promo,No,4,65,Low
+205,48,Female,Medium,3,Soft Drinks,0,84,3,2,4,4,4,0.56,Not really interested in energy drinks.,Gym,3.12,5,Online Ads,Yes,4,93,Low
+206,47,Female,Medium,9,Water,1,132,3,5,2,1,1,0.4,Great taste but packaging could be improved.,Gym,2.05,5,Word of Mouth,No,5,46,Medium
+207,52,Female,High,8,Soft Drinks,1,123,4,1,2,4,4,0.53,I love the idea of a healthy energy drink.,Convenience Store,2.76,1,Online Ads,No,4,38,High
+208,24,Female,High,1,Water,1,92,5,3,5,1,1,0.8,Love the natural ingredients.,Cafe,2.18,4,Word of Mouth,No,1,67,Medium
+209,33,Male,Medium,6,,1,130,1,2,4,2,5,0.41,Great taste but packaging could be improved.,Gym,1.47,5,Word of Mouth,No,4,32,Medium
+210,43,Female,High,9,Water,1,121,4,3,3,3,2,0.33,Needs more flavor options.,Cafe,4.74,1,Online Ads,No,5,12,Medium
+211,19,Female,Medium,7,Energy Drinks,0,107,4,3,5,2,3,0.29,Price is a concern for students like me.,Convenience Store,3.82,4,TV,No,4,83,Low
+212,18,Female,Medium,4,Water,0,104,4,4,2,5,2,0.41,Not sure if I would switch from my current brand.,Convenience Store,0.7,2,Social Media,No,3,53,Low
+213,29,Male,Medium,1,Juices,1,40,3,1,4,5,5,0.75,Love the natural ingredients.,Cafe,4.34,1,In-store Promo,Yes,3,6,High
+214,22,Male,Medium,2,Water,0,97,2,3,5,5,1,0.53,Love the natural ingredients.,Online Store,2.44,3,Word of Mouth,No,5,78,Medium
+215,54,Male,Low,5,Energy Drinks,1,65,1,5,4,1,2,0.36,Not sure if I would switch from my current brand.,Supermarket,4.47,1,In-store Promo,Yes,1,86,High
+216,49,Male,High,5,Energy Drinks,1,148,5,5,2,4,5,0.32,Not sure if I would switch from my current brand.,Online Store,4,1,Online Ads,No,1,13,Low
+217,26,Female,High,8,Soft Drinks,0,59,5,4,5,2,4,0.43,Not sure if I would switch from my current brand.,Online Store,2.13,4,In-store Promo,Yes,2,86,High
+218,52,Female,Low,6,,1,126,2,1,2,2,3,0.86,Not sure if I would switch from my current brand.,Online Store,0.11,2,Online Ads,Yes,5,18,Medium
+219,36,Male,High,8,Water,1,49,4,1,1,2,2,0.44,Not sure if I would switch from my current brand.,Gym,1.34,3,In-store Promo,Yes,4,53,Medium
+220,33,Other,Low,2,Soft Drinks,0,98,1,5,2,2,1,0.89,Love the natural ingredients.,Convenience Store,2.71,5,Social Media,Yes,5,92,Medium
+221,20,Female,Medium,3,,1,114,5,2,4,5,4,0.54,Too expensive compared to other drinks.,Online Store,3.17,5,Social Media,Yes,2,19,High
+222,37,Male,Medium,6,Water,1,80,5,4,3,2,5,0.33,Too expensive compared to other drinks.,Convenience Store,1.29,1,Social Media,Yes,5,28,Medium
+223,41,Male,Low,10,Juices,0,144,4,4,2,4,3,0.82,Sounds great! Would definitely try.,Cafe,0.7,4,Social Media,Yes,5,23,Medium
+224,50,Male,High,3,Water,1,44,2,5,3,5,1,0.52,Too expensive compared to other drinks.,Supermarket,4.17,4,Social Media,Yes,2,81,High
+225,41,Male,High,6,Energy Drinks,1,104,1,5,1,2,5,0.7,Needs more flavor options.,Cafe,4.92,5,Social Media,No,1,62,High
+226,28,Male,Medium,6,Energy Drinks,0,56,2,2,5,1,5,0.89,Too expensive compared to other drinks.,Cafe,2.63,3,Online Ads,Yes,4,73,Medium
+227,25,Male,Low,2,Juices,1,61,2,2,5,3,2,0.24,Love the natural ingredients.,Gym,0.86,2,Word of Mouth,Yes,2,56,High
+228,53,Male,Low,7,Soft Drinks,0,137,1,1,3,3,2,0.27,Not sure if I would switch from my current brand.,Supermarket,1.36,3,In-store Promo,No,3,7,Medium
+229,37,Male,Medium,2,,1,148,1,4,5,3,1,0.7,Convenience of availability is key.,Cafe,0.09,2,Social Media,Yes,1,89,Low
+230,52,Female,High,6,Water,1,80,5,4,2,5,5,0.4,Convenience of availability is key.,Cafe,4.57,5,Online Ads,Yes,3,61,Medium
+231,42,Male,Medium,1,Energy Drinks,0,132,5,5,3,2,2,0.33,Needs more flavor options.,Supermarket,0.59,2,Online Ads,No,1,28,High
+232,52,Female,Low,3,Soft Drinks,0,107,1,1,4,5,3,0.23,Not really interested in energy drinks.,Supermarket,2.88,4,Online Ads,No,4,73,High
+233,42,Male,Medium,2,Juices,1,108,3,4,2,4,3,0.22,Love the natural ingredients.,Cafe,1.37,1,Word of Mouth,Yes,4,16,Medium
+234,46,Other,Medium,7,Energy Drinks,1,50,5,1,2,1,5,0.74,I love the idea of a healthy energy drink.,Supermarket,2.77,1,In-store Promo,Yes,5,65,Medium
+235,35,Male,Medium,4,Juices,1,95,3,1,2,1,2,0.29,Great taste but packaging could be improved.,Cafe,3.26,5,Word of Mouth,No,3,5,Low
+236,35,Male,Low,8,Water,0,90,1,5,4,3,1,0.53,Sounds great! Would definitely try.,Cafe,4.15,4,TV,No,1,57,High
+237,19,Other,Medium,6,,1,60,5,1,1,3,1,0.62,I love the idea of a healthy energy drink.,Gym,1.03,3,Online Ads,Yes,4,68,High
+238,52,Female,Medium,10,Energy Drinks,1,138,2,2,5,3,1,0.5,Love the natural ingredients.,Online Store,0.05,4,TV,No,2,27,Medium
+239,33,Female,High,4,Energy Drinks,1,115,1,2,3,2,3,0.22,Too expensive compared to other drinks.,Cafe,0.68,1,Social Media,Yes,4,61,High
+240,53,Male,Medium,5,Water,0,65,4,3,1,4,2,0.75,Not sure if I would switch from my current brand.,Convenience Store,4.5,1,Social Media,Yes,2,40,High
+241,50,Male,Medium,9,Soft Drinks,1,58,3,5,3,4,2,0.21,I love the idea of a healthy energy drink.,Online Store,4.37,4,Word of Mouth,Yes,1,68,Medium
+242,21,Female,High,7,,1,148,1,3,5,4,3,0.73,Great taste but packaging could be improved.,Online Store,2.99,4,In-store Promo,No,4,81,Low
+243,50,Other,Low,10,Energy Drinks,0,99,1,2,4,4,1,0.83,Not really interested in energy drinks.,Online Store,3,1,TV,Yes,4,89,Medium
+244,31,Female,High,9,,1,110,5,3,2,3,1,0.5,Convenience of availability is key.,Gym,3.33,3,In-store Promo,No,1,83,Medium
+245,38,Female,Medium,7,Energy Drinks,0,86,5,5,2,1,5,0.57,Not really interested in energy drinks.,Cafe,0.88,5,Word of Mouth,Yes,4,40,Medium
+246,37,Male,Low,1,,1,110,5,5,4,3,4,0.53,Great taste but packaging could be improved.,Gym,4.57,5,Social Media,Yes,2,48,Medium
+247,25,Female,Medium,8,Juices,1,65,4,1,1,4,2,0.47,Not sure if I would switch from my current brand.,Cafe,2.09,4,In-store Promo,Yes,4,90,High
+248,24,Male,Medium,4,Energy Drinks,0,79,5,4,1,3,2,0.82,Too expensive compared to other drinks.,Gym,1.92,5,In-store Promo,No,3,48,Low
+249,20,Male,Low,3,,1,44,1,1,3,4,2,0.83,Great taste but packaging could be improved.,Gym,2.59,1,Social Media,Yes,5,75,Medium
+250,34,Male,Medium,7,Soft Drinks,1,60,5,5,4,5,4,0.44,Sounds great! Would definitely try.,Convenience Store,0.23,1,TV,Yes,2,70,Medium
+251,50,Female,Medium,3,Juices,0,117,2,2,1,1,5,0.63,Great taste but packaging could be improved.,Gym,0.83,4,Social Media,No,3,2,Medium
+252,29,Male,Medium,8,Juices,1,43,5,2,4,5,4,0.85,Love the natural ingredients.,Supermarket,3.69,4,In-store Promo,Yes,1,9,Medium
+253,39,Male,Low,6,Soft Drinks,1,62,4,1,5,2,1,0.87,Too expensive compared to other drinks.,Convenience Store,0.41,4,TV,No,2,97,Low
+254,39,Female,High,5,,1,145,2,5,2,3,1,0.56,Not sure if I would switch from my current brand.,Gym,3.02,3,TV,Yes,5,88,Low
+255,47,Male,High,4,Water,0,123,1,2,2,2,2,0.52,Convenience of availability is key.,Online Store,1.23,5,Social Media,No,5,34,Medium
+256,25,Female,High,8,Soft Drinks,1,54,1,5,2,3,3,0.4,Convenience of availability is key.,Supermarket,1.95,4,In-store Promo,Yes,1,79,Medium
+257,44,Male,Medium,8,,1,148,3,2,4,5,2,0.87,Great taste but packaging could be improved.,Supermarket,1.44,2,Word of Mouth,No,1,1,Low
+258,44,Female,Low,1,Soft Drinks,0,132,2,5,4,4,3,0.3,Love the natural ingredients.,Supermarket,1.78,2,In-store Promo,Yes,2,23,High
+259,51,Female,Medium,9,Soft Drinks,1,47,3,3,3,4,4,0.61,I love the idea of a healthy energy drink.,Convenience Store,3.6,1,Online Ads,Yes,4,73,Medium
+260,38,Male,Low,5,Energy Drinks,1,80,2,5,2,3,1,0.4,Not really interested in energy drinks.,Gym,1.49,5,Word of Mouth,Yes,1,37,Medium
+261,47,Male,Low,4,,1,58,2,5,3,4,3,0.4,Not really interested in energy drinks.,Gym,2.83,4,TV,Yes,4,21,High
+262,50,Male,Medium,6,Water,1,142,4,1,2,5,4,0.48,Not really interested in energy drinks.,Online Store,2.38,2,Word of Mouth,Yes,3,25,Low
+263,45,Male,Medium,6,Energy Drinks,1,85,3,3,3,4,1,0.9,I love the idea of a healthy energy drink.,Online Store,3.32,5,TV,No,5,42,Low
+264,50,Other,Medium,2,Soft Drinks,1,67,4,4,3,5,3,0.24,Love the natural ingredients.,Supermarket,4.68,1,TV,Yes,4,54,High
+265,22,Male,Medium,8,Soft Drinks,0,149,2,1,5,2,2,0.6,Not really interested in energy drinks.,Online Store,3.66,3,Word of Mouth,No,5,38,Medium
+266,36,Female,Medium,7,Soft Drinks,1,130,1,4,3,5,2,0.26,Sounds great! Would definitely try.,Convenience Store,1.07,5,TV,No,4,90,Medium
+267,21,Male,Low,1,,1,107,2,2,4,1,2,0.31,I love the idea of a healthy energy drink.,Gym,0.16,5,TV,No,3,28,High
+268,52,Female,High,5,,1,54,4,4,3,1,4,0.51,I love the idea of a healthy energy drink.,Supermarket,1.31,3,Online Ads,Yes,1,19,High
+269,34,Female,Medium,6,Energy Drinks,1,138,3,5,2,1,2,0.56,Not sure if I would switch from my current brand.,Online Store,2.98,5,In-store Promo,Yes,3,90,High
+270,45,Female,Medium,4,Water,1,76,3,4,3,3,5,0.38,Not sure if I would switch from my current brand.,Convenience Store,0.26,1,In-store Promo,No,1,40,Medium
+271,47,Female,Low,2,Energy Drinks,1,40,4,1,1,3,1,0.42,Too expensive compared to other drinks.,Convenience Store,2.48,1,Online Ads,No,1,53,Medium
+272,46,Male,Medium,4,Juices,1,106,3,1,2,3,4,0.26,Sounds great! Would definitely try.,Online Store,2.98,3,Word of Mouth,Yes,5,19,Medium
+273,23,Male,Medium,1,Soft Drinks,1,150,5,4,1,5,2,0.41,Sounds great! Would definitely try.,Gym,1.67,4,Social Media,Yes,3,18,Low
+274,52,Other,Low,7,Soft Drinks,1,63,1,1,2,3,1,0.88,Too expensive compared to other drinks.,Online Store,3.85,2,Social Media,Yes,4,83,Medium
+275,54,Female,Low,2,Soft Drinks,0,66,1,1,4,2,3,0.86,Sounds great! Would definitely try.,Supermarket,0.53,4,Social Media,No,3,98,Low
+276,41,Other,Medium,2,Energy Drinks,0,79,1,4,4,1,2,0.43,Needs more flavor options.,Online Store,0.38,5,Online Ads,Yes,5,65,High
+277,46,Male,Medium,9,Energy Drinks,1,102,3,3,4,5,1,0.6,Price is a concern for students like me.,Convenience Store,3.64,2,Online Ads,Yes,1,29,Medium
+278,48,Female,Low,5,Soft Drinks,0,100,3,3,1,1,5,0.84,Not really interested in energy drinks.,Online Store,2.48,3,TV,No,5,52,Medium
+279,52,Other,High,2,Energy Drinks,0,75,2,2,5,3,3,0.2,Not sure if I would switch from my current brand.,Gym,3.44,3,Social Media,Yes,2,33,Medium
+280,50,Male,Low,9,,0,137,2,1,2,5,5,0.77,Too expensive compared to other drinks.,Cafe,2.17,2,Word of Mouth,Yes,2,21,Low
+281,38,Male,Medium,9,,0,132,1,4,4,4,1,0.86,Too expensive compared to other drinks.,Online Store,1.23,1,Word of Mouth,No,4,66,Low
+282,49,Female,High,1,Energy Drinks,0,63,5,1,2,2,5,0.26,Sounds great! Would definitely try.,Gym,4.1,2,Social Media,No,5,5,Medium
+283,40,Female,Medium,3,Soft Drinks,1,63,2,5,1,3,1,0.31,I love the idea of a healthy energy drink.,Gym,4,5,Social Media,Yes,4,78,Low
+284,50,Female,Medium,4,Energy Drinks,0,145,2,1,5,3,1,0.87,Convenience of availability is key.,Convenience Store,3.47,1,Social Media,Yes,4,26,Medium
+285,20,Male,Medium,7,Energy Drinks,1,43,3,1,1,2,5,0.58,Great taste but packaging could be improved.,Gym,1.36,3,Online Ads,Yes,2,9,High
+286,35,Female,Low,10,Energy Drinks,1,106,5,3,2,2,1,0.21,Great taste but packaging could be improved.,Gym,2.95,2,Online Ads,Yes,4,72,High
+287,42,Male,High,4,Juices,1,73,1,4,5,4,2,0.38,Too expensive compared to other drinks.,Gym,1.8,4,Online Ads,No,2,96,Medium
+288,48,Male,Medium,2,,0,96,2,1,5,3,1,0.51,Not really interested in energy drinks.,Gym,0.46,4,In-store Promo,Yes,1,95,Low
+289,20,Male,High,7,Water,1,88,5,3,1,3,4,0.69,Needs more flavor options.,Supermarket,4.59,5,Word of Mouth,Yes,5,47,High
+290,41,Female,Low,6,Water,1,126,5,2,4,1,1,0.71,Not really interested in energy drinks.,Supermarket,0.68,4,Word of Mouth,Yes,4,69,High
+291,49,Female,Low,3,Juices,1,92,1,3,2,5,4,0.9,Too expensive compared to other drinks.,Convenience Store,4.75,2,TV,Yes,2,58,Low
+292,39,Female,Low,6,Energy Drinks,1,62,5,3,3,5,1,0.4,Not really interested in energy drinks.,Online Store,2.23,2,Online Ads,Yes,3,99,High
+293,40,Male,Medium,6,Juices,1,148,5,3,3,1,1,0.58,Not sure if I would switch from my current brand.,Gym,0.93,4,In-store Promo,No,4,58,Low
+294,19,Female,Medium,5,Juices,0,108,5,1,1,5,5,0.57,Not really interested in energy drinks.,Online Store,2.71,2,In-store Promo,Yes,1,1,High
+295,44,Male,High,4,Soft Drinks,1,134,2,1,2,2,2,0.48,Sounds great! Would definitely try.,Online Store,4.36,5,Word of Mouth,No,1,28,High
+296,19,Female,Medium,10,,1,92,1,2,2,5,2,0.32,Sounds great! Would definitely try.,Convenience Store,3.66,1,Online Ads,No,3,67,Low
+297,43,Male,High,1,Water,1,101,5,5,1,5,3,0.88,Needs more flavor options.,Gym,4.03,5,TV,Yes,2,64,High
+298,34,Male,Low,10,Energy Drinks,1,80,5,5,2,1,5,0.8,Not sure if I would switch from my current brand.,Gym,3.29,5,Online Ads,Yes,4,82,Medium
+299,50,Female,High,6,Water,0,96,2,5,4,4,5,0.55,Convenience of availability is key.,Cafe,3.46,2,Social Media,Yes,2,25,High
+300,26,Male,Medium,2,Water,1,99,1,2,1,5,2,0.62,I love the idea of a healthy energy drink.,Online Store,4.25,1,Online Ads,Yes,1,88,Medium
+301,46,Female,Medium,3,,0,93,3,5,4,5,5,0.36,Not sure if I would switch from my current brand.,Online Store,1.25,2,Social Media,Yes,2,9,High
+302,43,Female,High,8,Water,0,109,2,5,2,4,2,0.58,Love the natural ingredients.,Supermarket,2.45,3,Social Media,Yes,1,52,Low
+303,52,Male,Medium,10,Water,0,140,1,3,1,1,5,0.69,Price is a concern for students like me.,Cafe,1.11,2,TV,Yes,2,78,Medium
+304,42,Female,Medium,6,Juices,0,96,5,1,2,4,1,0.56,Too expensive compared to other drinks.,Supermarket,4.94,2,Word of Mouth,No,3,58,Low
+305,41,Male,Low,3,,1,49,1,1,1,1,2,0.89,Love the natural ingredients.,Supermarket,4.72,2,Online Ads,Yes,5,21,High
+306,30,Female,Low,7,Soft Drinks,0,79,1,3,2,2,2,0.63,Needs more flavor options.,Supermarket,0.2,1,Social Media,No,3,50,High
+307,24,Other,High,4,Energy Drinks,0,46,1,3,4,1,4,0.46,Love the natural ingredients.,Convenience Store,3.53,2,Online Ads,Yes,3,47,High
+308,53,Female,Medium,9,Water,1,142,3,3,4,2,5,0.74,Sounds great! Would definitely try.,Convenience Store,4.63,1,Word of Mouth,No,5,20,High
+309,37,Male,Medium,5,Energy Drinks,1,77,1,1,2,2,5,0.32,Not really interested in energy drinks.,Supermarket,0.9,4,Word of Mouth,Yes,5,21,Low
+310,18,Other,Medium,3,Soft Drinks,1,124,3,5,1,1,2,0.47,I love the idea of a healthy energy drink.,Cafe,2.84,3,In-store Promo,Yes,4,99,Medium
+311,25,Female,Low,2,Energy Drinks,1,100,5,3,3,3,1,0.44,Great taste but packaging could be improved.,Online Store,4.58,1,Word of Mouth,No,4,97,Low
+312,33,Male,Low,2,Soft Drinks,1,123,3,2,4,1,1,0.5,Too expensive compared to other drinks.,Cafe,0.17,4,TV,Yes,3,29,Low
+313,31,Male,Medium,3,Juices,0,42,5,3,4,5,1,0.75,Great taste but packaging could be improved.,Gym,3.49,1,Social Media,Yes,3,24,Low
+314,29,Female,Medium,2,Water,0,90,5,4,3,5,5,0.54,Not really interested in energy drinks.,Convenience Store,1.49,1,In-store Promo,No,1,27,Medium
+315,40,Female,Low,4,Soft Drinks,1,125,3,3,2,3,4,0.76,Sounds great! Would definitely try.,Online Store,4.62,3,TV,Yes,1,64,Low
+316,32,Female,Medium,2,Energy Drinks,0,86,2,1,1,2,2,0.6,Sounds great! Would definitely try.,Online Store,4.86,5,Online Ads,Yes,4,44,Low
+317,45,Female,Low,10,Water,1,107,4,3,2,3,3,0.44,Not really interested in energy drinks.,Gym,4.72,5,Social Media,No,4,67,Low
+318,51,Female,Medium,9,Juices,0,131,1,4,5,5,4,0.77,Too expensive compared to other drinks.,Gym,2.37,1,Word of Mouth,No,1,6,Low
+319,19,Male,Low,2,Water,0,115,4,2,4,3,3,0.37,Great taste but packaging could be improved.,Supermarket,4.31,2,Social Media,No,1,48,High
+320,49,Male,Medium,9,Soft Drinks,1,77,1,5,5,1,4,0.36,Not sure if I would switch from my current brand.,Convenience Store,4.22,4,Online Ads,Yes,2,8,High
+321,40,Male,Medium,6,Juices,1,75,1,3,4,3,1,0.55,Sounds great! Would definitely try.,Convenience Store,1.6,2,In-store Promo,No,2,35,High
+322,39,Female,Medium,1,Energy Drinks,1,150,5,4,4,2,5,0.38,Great taste but packaging could be improved.,Cafe,4.14,2,In-store Promo,Yes,1,82,Medium
+323,42,Male,Low,4,Juices,1,80,1,4,5,1,3,0.21,Convenience of availability is key.,Supermarket,0.19,1,In-store Promo,No,2,0,Low
+324,39,Female,Low,1,Juices,0,108,1,2,5,4,4,0.65,Great taste but packaging could be improved.,Supermarket,2.98,1,Word of Mouth,No,5,9,High
+325,39,Female,Medium,6,,0,52,3,1,2,5,5,0.56,Convenience of availability is key.,Supermarket,1.15,1,TV,No,4,35,Medium
+326,23,Female,Medium,4,Juices,1,126,4,3,5,5,3,0.51,Convenience of availability is key.,Supermarket,0.6,1,TV,No,4,72,Low
+327,32,Male,Medium,3,Juices,1,97,3,4,2,3,2,0.88,Sounds great! Would definitely try.,Convenience Store,0.38,5,Social Media,Yes,1,45,Low
+328,54,Female,Low,3,Water,0,89,1,2,2,1,4,0.6,Too expensive compared to other drinks.,Convenience Store,3.48,1,Word of Mouth,No,3,31,Low
+329,50,Male,Medium,9,Energy Drinks,1,69,5,5,2,4,2,0.8,Needs more flavor options.,Supermarket,1.7,5,In-store Promo,No,1,31,Low
+330,25,Female,High,6,Water,0,101,3,4,4,1,1,0.3,Sounds great! Would definitely try.,Cafe,3.62,5,In-store Promo,Yes,2,5,Medium
+331,22,Male,Medium,9,Water,1,140,3,2,4,5,2,0.6,Too expensive compared to other drinks.,Online Store,0.33,1,Online Ads,No,3,47,Medium
+332,21,Male,Low,5,Soft Drinks,0,64,2,1,5,1,2,0.81,Too expensive compared to other drinks.,Online Store,1.58,3,Online Ads,Yes,2,37,Low
+333,23,Female,Medium,2,Water,1,66,1,1,4,4,4,0.61,Love the natural ingredients.,Cafe,2.7,4,In-store Promo,No,5,16,Low
+334,49,Male,Low,8,,1,90,5,4,5,3,1,0.7,Not really interested in energy drinks.,Supermarket,3.95,2,In-store Promo,No,2,73,High
+335,47,Male,Low,5,,0,117,3,4,4,2,2,0.46,Not really interested in energy drinks.,Convenience Store,1.59,5,Word of Mouth,No,5,26,Low
+336,52,Female,High,2,Soft Drinks,1,96,3,3,1,1,5,0.26,Not really interested in energy drinks.,Online Store,3.13,4,TV,Yes,5,53,Medium
+337,33,Female,Low,4,Energy Drinks,1,86,5,2,1,2,3,0.52,Price is a concern for students like me.,Gym,4.43,3,Online Ads,Yes,2,49,High
+338,30,Female,Medium,9,Energy Drinks,0,139,1,4,5,5,2,0.48,Sounds great! Would definitely try.,Gym,3.08,2,TV,Yes,2,34,Low
+339,47,Female,Medium,4,Water,0,78,2,3,4,3,1,0.81,Too expensive compared to other drinks.,Cafe,1.16,2,Word of Mouth,No,5,84,Low
+340,36,Female,Medium,4,Water,0,55,3,3,4,3,2,0.37,Love the natural ingredients.,Supermarket,0.12,5,In-store Promo,Yes,3,24,Medium
+341,34,Male,Medium,2,Water,0,61,2,4,2,1,3,0.88,Convenience of availability is key.,Online Store,4.35,1,TV,Yes,5,27,Medium
+342,36,Male,Low,6,Energy Drinks,1,124,4,1,3,3,1,0.87,Needs more flavor options.,Supermarket,0.11,3,In-store Promo,No,4,14,Medium
+343,45,Male,Medium,2,Juices,1,93,1,2,5,1,4,0.37,Needs more flavor options.,Online Store,4.37,5,In-store Promo,Yes,5,3,High
+344,43,Other,Medium,7,,1,60,4,2,3,1,1,0.44,Convenience of availability is key.,Cafe,2.64,3,Social Media,No,3,92,Low
+345,54,Female,Low,3,Juices,0,111,4,1,3,2,4,0.83,Great taste but packaging could be improved.,Cafe,4.7,1,TV,No,4,72,Medium
+346,43,Male,Medium,3,Juices,0,55,4,4,5,3,1,0.88,Great taste but packaging could be improved.,Gym,3.99,1,TV,No,1,26,Medium
+347,40,Female,Low,5,Energy Drinks,0,98,1,2,4,1,3,0.51,Not really interested in energy drinks.,Supermarket,4.99,5,In-store Promo,Yes,1,25,Low
+348,26,Other,Low,3,Juices,1,70,1,4,5,2,3,0.42,Sounds great! Would definitely try.,Gym,1.75,1,Word of Mouth,Yes,3,18,Medium
+349,29,Male,Medium,2,Soft Drinks,1,81,5,4,3,4,1,0.57,Price is a concern for students like me.,Supermarket,3.84,4,Social Media,Yes,5,91,Low
+350,18,Female,Low,10,Water,0,113,2,3,4,2,2,0.68,Love the natural ingredients.,Gym,2.01,2,In-store Promo,Yes,2,16,Medium
+351,18,Female,Medium,9,Soft Drinks,1,71,2,1,1,2,3,0.39,Needs more flavor options.,Convenience Store,2.4,5,Online Ads,Yes,3,42,Low
+352,51,Female,Medium,2,,1,98,5,4,5,1,4,0.72,Not really interested in energy drinks.,Convenience Store,3.14,3,Online Ads,Yes,4,40,Medium
+353,49,Male,High,2,Water,1,73,5,5,5,5,4,0.24,I love the idea of a healthy energy drink.,Convenience Store,4.37,4,Social Media,No,4,41,Medium
+354,42,Female,Low,8,Juices,1,48,4,1,4,5,5,0.23,Not really interested in energy drinks.,Convenience Store,4.92,5,Word of Mouth,No,1,49,High
+355,18,Other,Low,9,,1,120,5,2,1,5,4,0.47,I love the idea of a healthy energy drink.,Online Store,3.84,1,In-store Promo,Yes,4,83,Low
+356,33,Female,Low,7,Water,1,50,3,3,1,2,5,0.45,Not sure if I would switch from my current brand.,Convenience Store,2.09,1,TV,No,3,39,Medium
+357,22,Female,Medium,3,Juices,1,135,2,2,4,1,1,0.42,Too expensive compared to other drinks.,Cafe,2.11,1,Social Media,No,4,38,Medium
+358,39,Other,Medium,9,Soft Drinks,1,49,5,2,2,3,1,0.54,Convenience of availability is key.,Cafe,3.69,1,Word of Mouth,No,3,22,High
+359,46,Female,Low,3,Water,0,125,3,1,5,2,1,0.42,Too expensive compared to other drinks.,Online Store,1.19,3,TV,No,2,95,Medium
+360,20,Male,High,5,Juices,0,56,3,2,5,2,2,0.33,Not really interested in energy drinks.,Convenience Store,0.55,4,Online Ads,Yes,1,51,Medium
+361,29,Female,Low,9,Soft Drinks,0,107,3,4,3,1,2,0.42,Too expensive compared to other drinks.,Convenience Store,1.77,2,Online Ads,Yes,4,46,High
+362,43,Female,Medium,3,,1,87,3,2,4,4,5,0.88,Love the natural ingredients.,Convenience Store,1.44,3,TV,Yes,3,62,High
+363,33,Male,Medium,7,,0,91,4,3,3,2,4,0.49,Not sure if I would switch from my current brand.,Gym,1.48,3,Social Media,Yes,5,96,Medium
+364,54,Female,High,1,,1,150,3,3,3,4,4,0.51,Price is a concern for students like me.,Supermarket,1.17,2,Online Ads,No,1,68,Medium
+365,39,Other,Medium,4,,1,64,4,5,1,4,1,0.6,Not sure if I would switch from my current brand.,Gym,0.21,2,In-store Promo,No,2,42,High
+366,46,Other,High,4,Energy Drinks,1,60,4,3,5,5,3,0.89,Needs more flavor options.,Supermarket,0.09,1,TV,Yes,3,47,High
+367,31,Female,Medium,7,Water,0,140,3,2,3,1,2,0.37,Love the natural ingredients.,Convenience Store,4.94,3,TV,Yes,2,33,High
+368,45,Male,High,8,Water,1,141,2,3,1,4,2,0.68,Too expensive compared to other drinks.,Convenience Store,2.14,5,Online Ads,No,2,39,Medium
+369,22,Other,Low,1,Energy Drinks,1,104,3,1,4,1,1,0.7,Price is a concern for students like me.,Gym,1.92,2,Social Media,Yes,4,74,Low
+370,47,Female,High,5,Juices,1,102,3,3,3,5,2,0.63,Too expensive compared to other drinks.,Gym,3.4,2,In-store Promo,Yes,4,60,Medium
+371,22,Male,Medium,7,Juices,0,128,3,4,5,1,1,0.26,Sounds great! Would definitely try.,Supermarket,1.09,4,Social Media,No,3,49,High
+372,29,Other,High,4,,1,90,2,1,3,2,5,0.67,Sounds great! Would definitely try.,Cafe,4.75,5,Word of Mouth,Yes,5,66,Medium
+373,33,Female,Medium,4,Soft Drinks,0,75,1,5,4,4,4,0.24,Great taste but packaging could be improved.,Supermarket,3.93,5,Word of Mouth,Yes,3,61,Medium
+374,43,Female,Medium,4,Juices,0,120,1,4,3,1,3,0.62,Not sure if I would switch from my current brand.,Gym,0.45,2,Online Ads,Yes,5,57,High
+375,43,Female,Medium,6,Soft Drinks,1,144,4,2,5,3,4,0.72,Price is a concern for students like me.,Gym,2.09,1,Online Ads,No,2,32,Medium
+376,38,Male,Medium,7,Water,1,127,4,2,1,1,4,0.35,Sounds great! Would definitely try.,Online Store,4.4,4,Online Ads,Yes,1,74,High
+377,53,Male,Low,2,Soft Drinks,1,105,2,2,5,4,5,0.79,Great taste but packaging could be improved.,Gym,4.72,5,Word of Mouth,Yes,3,15,Medium
+378,50,Male,Low,5,Water,1,143,5,4,1,5,2,0.22,Love the natural ingredients.,Online Store,2.34,2,Social Media,Yes,3,81,Medium
+379,47,Female,Low,4,Energy Drinks,1,54,1,4,2,5,3,0.79,Price is a concern for students like me.,Cafe,3.07,5,Social Media,Yes,5,93,Medium
+380,54,Male,Low,3,Energy Drinks,1,135,4,4,5,4,2,0.52,Great taste but packaging could be improved.,Supermarket,0.84,4,Online Ads,Yes,2,47,High
+381,40,Male,High,7,,0,78,1,1,5,2,4,0.35,Convenience of availability is key.,Supermarket,4.96,4,In-store Promo,No,2,9,Low
+382,27,Male,Low,6,Juices,1,109,2,1,4,2,1,0.29,Price is a concern for students like me.,Online Store,1.16,3,Social Media,Yes,5,81,Low
+383,22,Female,High,7,,0,40,2,2,3,5,4,0.87,Not really interested in energy drinks.,Supermarket,4.71,2,Word of Mouth,No,2,37,High
+384,53,Other,Medium,5,Water,1,150,5,3,1,5,2,0.25,Great taste but packaging could be improved.,Gym,3.25,4,TV,Yes,4,18,Low
+385,51,Male,Low,6,,1,62,5,2,1,4,4,0.34,Too expensive compared to other drinks.,Convenience Store,3.04,3,TV,Yes,1,35,Medium
+386,48,Male,Medium,5,Soft Drinks,0,78,2,5,4,2,1,0.44,Not really interested in energy drinks.,Online Store,2.56,3,TV,Yes,3,58,Medium
+387,27,Female,Medium,7,Water,1,96,4,1,4,5,5,0.63,Convenience of availability is key.,Supermarket,1.15,5,In-store Promo,Yes,1,62,Medium
+388,36,Female,Medium,2,Energy Drinks,1,120,1,4,3,2,2,0.58,Sounds great! Would definitely try.,Online Store,0.88,5,Online Ads,Yes,3,76,Medium
+389,49,Male,Medium,5,Juices,1,73,3,1,3,5,4,0.29,I love the idea of a healthy energy drink.,Online Store,1.1,3,Word of Mouth,Yes,4,45,Low
+390,18,Female,Medium,6,Water,1,80,5,4,5,1,2,0.4,Great taste but packaging could be improved.,Convenience Store,0.93,5,In-store Promo,Yes,2,2,Medium
+391,22,Male,Low,6,Water,1,132,3,5,2,3,5,0.37,Love the natural ingredients.,Gym,3.9,4,Word of Mouth,No,5,73,Medium
+392,21,Male,High,5,Soft Drinks,1,112,4,5,3,1,4,0.35,Great taste but packaging could be improved.,Online Store,1.75,1,Word of Mouth,Yes,4,64,Medium
+393,33,Female,High,10,Juices,0,52,5,1,4,5,4,0.49,I love the idea of a healthy energy drink.,Supermarket,0.29,4,Online Ads,No,1,90,Low
+394,41,Male,Medium,7,Energy Drinks,1,109,3,4,3,3,2,0.69,Convenience of availability is key.,Cafe,4.85,3,TV,No,5,7,Medium
+395,33,Other,Low,10,Water,1,45,4,5,1,3,2,0.35,Convenience of availability is key.,Online Store,4.42,3,Online Ads,Yes,2,50,Low
+396,19,Male,Medium,8,Water,0,123,1,2,2,5,1,0.46,Not really interested in energy drinks.,Online Store,4.64,4,In-store Promo,Yes,4,80,Low
+397,45,Female,Low,7,Soft Drinks,0,91,4,2,5,5,5,0.47,Price is a concern for students like me.,Convenience Store,4.97,5,In-store Promo,Yes,5,72,Low
+398,49,Female,Low,5,,1,42,5,4,1,2,1,0.88,Love the natural ingredients.,Gym,0.87,5,In-store Promo,Yes,4,5,Low
+399,44,Male,Low,1,Energy Drinks,1,120,2,1,1,5,4,0.87,Not really interested in energy drinks.,Cafe,1.98,3,Online Ads,Yes,4,88,High
+400,37,Female,Medium,5,Juices,1,102,1,5,2,4,2,0.76,Love the natural ingredients.,Supermarket,3.79,2,Word of Mouth,No,2,38,Low
+401,41,Male,High,10,Water,1,88,3,1,5,5,4,0.37,Love the natural ingredients.,Cafe,3.48,5,Word of Mouth,Yes,3,59,High
+402,29,Other,Medium,2,Water,0,115,5,2,4,4,4,0.25,I love the idea of a healthy energy drink.,Supermarket,0.77,4,Social Media,Yes,5,27,High
+403,52,Male,Medium,5,Energy Drinks,0,86,2,5,5,5,3,0.42,Not really interested in energy drinks.,Gym,4.08,5,In-store Promo,No,2,96,Medium
+404,50,Male,Medium,5,,1,148,4,1,3,2,3,0.39,Love the natural ingredients.,Supermarket,1.12,4,Word of Mouth,Yes,4,53,Low
+405,50,Male,Medium,2,Water,0,94,2,3,1,4,4,0.55,Needs more flavor options.,Convenience Store,1.12,3,Social Media,No,2,36,Medium
+406,54,Other,Medium,5,Energy Drinks,0,103,5,4,3,1,2,0.74,I love the idea of a healthy energy drink.,Convenience Store,2.68,5,Word of Mouth,Yes,3,8,High
+407,29,Female,High,4,Soft Drinks,0,104,5,4,4,4,4,0.8,Convenience of availability is key.,Convenience Store,2.96,4,In-store Promo,Yes,5,81,Medium
+408,20,Female,Low,1,,1,120,2,3,3,2,3,0.79,I love the idea of a healthy energy drink.,Convenience Store,2.9,3,TV,Yes,3,55,Low
+409,18,Male,High,3,Juices,1,106,4,2,5,4,2,0.45,Too expensive compared to other drinks.,Cafe,0.46,2,In-store Promo,Yes,1,58,Medium
+410,50,Female,Medium,1,Water,0,129,2,5,3,5,4,0.68,Too expensive compared to other drinks.,Gym,4.39,4,Online Ads,No,5,84,High
+411,27,Male,Medium,5,Energy Drinks,1,54,5,4,4,5,5,0.42,Love the natural ingredients.,Supermarket,1.33,2,Word of Mouth,Yes,3,1,High
+412,46,Female,Medium,4,Soft Drinks,1,139,5,3,4,2,5,0.24,Not really interested in energy drinks.,Supermarket,0.65,2,Word of Mouth,No,4,60,Low
+413,30,Male,Medium,7,Juices,1,71,3,3,4,3,4,0.69,Convenience of availability is key.,Convenience Store,4.44,1,Online Ads,Yes,5,57,Medium
+414,29,Male,High,5,Energy Drinks,0,135,3,2,5,5,2,0.21,I love the idea of a healthy energy drink.,Convenience Store,4.78,5,Online Ads,Yes,5,59,Low
+415,48,Male,High,10,Energy Drinks,1,107,1,2,4,1,4,0.49,Not really interested in energy drinks.,Online Store,4.31,4,TV,Yes,2,39,Low
+416,19,Female,Medium,4,Juices,0,57,5,1,1,2,4,0.43,I love the idea of a healthy energy drink.,Gym,4.05,2,Word of Mouth,Yes,4,35,High
+417,52,Female,Low,2,Soft Drinks,1,122,3,4,4,4,3,0.69,I love the idea of a healthy energy drink.,Cafe,3.28,1,Word of Mouth,No,1,36,Low
+418,40,Male,Medium,4,Soft Drinks,1,82,2,1,3,4,5,0.74,Needs more flavor options.,Supermarket,2.75,3,TV,Yes,3,78,Low
+419,34,Female,High,2,,0,74,4,3,3,1,3,0.41,Too expensive compared to other drinks.,Online Store,0.43,4,Social Media,Yes,2,91,Low
+420,43,Female,Low,8,Water,1,143,2,5,3,5,3,0.77,I love the idea of a healthy energy drink.,Online Store,2.04,2,TV,Yes,3,17,High
+421,25,Female,Medium,3,Juices,1,117,4,5,5,2,4,0.41,Needs more flavor options.,Supermarket,1.86,5,In-store Promo,Yes,1,97,High
+422,46,Male,Medium,9,Juices,0,97,3,2,3,1,3,0.51,Too expensive compared to other drinks.,Cafe,1.3,1,Word of Mouth,Yes,1,62,Medium
+423,43,Male,Medium,4,Juices,1,72,1,5,5,5,5,0.71,Needs more flavor options.,Online Store,3.62,2,Online Ads,Yes,5,21,High
+424,27,Female,Low,6,Soft Drinks,0,53,2,5,5,2,3,0.69,Not really interested in energy drinks.,Online Store,2.48,5,In-store Promo,No,1,10,Low
+425,43,Male,Medium,10,Water,1,73,2,5,4,4,5,0.89,Price is a concern for students like me.,Gym,0.41,2,Word of Mouth,Yes,3,57,Medium
+426,51,Male,High,5,,1,100,2,3,1,2,3,0.36,Too expensive compared to other drinks.,Cafe,1.1,4,TV,Yes,4,56,Medium
+427,24,Female,Low,10,Energy Drinks,1,43,4,5,4,3,5,0.66,Sounds great! Would definitely try.,Online Store,3.42,4,In-store Promo,Yes,4,76,Low
+428,21,Other,Low,1,Energy Drinks,0,127,3,5,4,2,3,0.63,Price is a concern for students like me.,Cafe,0.38,4,Word of Mouth,Yes,5,3,Medium
+429,28,Male,High,9,Juices,1,98,2,5,5,3,3,0.84,Not really interested in energy drinks.,Supermarket,4.26,1,Social Media,No,3,85,High
+430,46,Male,Low,1,Water,1,68,2,1,5,2,2,0.31,I love the idea of a healthy energy drink.,Convenience Store,2.48,4,Social Media,Yes,3,6,Low
+431,53,Female,High,8,Soft Drinks,1,122,1,3,3,3,5,0.73,Convenience of availability is key.,Online Store,2.4,5,Online Ads,Yes,1,60,Low
+432,42,Male,Medium,9,Water,1,45,1,2,3,4,5,0.6,Not really interested in energy drinks.,Gym,2.96,2,Word of Mouth,No,3,53,Low
+433,38,Male,Low,9,Water,1,136,3,1,4,5,5,0.39,Needs more flavor options.,Supermarket,4.12,3,Social Media,Yes,2,87,Low
+434,53,Male,High,1,Soft Drinks,0,88,3,4,2,3,1,0.53,Needs more flavor options.,Cafe,1.74,5,TV,Yes,1,67,High
+435,27,Female,Medium,2,Juices,0,79,5,3,2,3,3,0.43,Needs more flavor options.,Supermarket,3.39,5,Word of Mouth,No,2,91,Medium
+436,54,Female,Medium,1,Water,1,122,1,3,3,4,5,0.61,Needs more flavor options.,Online Store,2.83,4,TV,No,5,78,Medium
+437,26,Male,Medium,10,Energy Drinks,0,104,5,4,2,3,1,0.82,Not really interested in energy drinks.,Cafe,1.34,1,TV,No,4,0,High
+438,41,Male,Medium,2,Soft Drinks,1,108,4,4,3,1,2,0.6,Convenience of availability is key.,Convenience Store,4.39,2,Social Media,Yes,5,54,Low
+439,52,Male,Low,10,,1,66,5,4,5,4,5,0.64,Great taste but packaging could be improved.,Supermarket,3.99,1,Word of Mouth,Yes,4,2,Medium
+440,52,Female,Medium,8,Juices,0,119,2,2,4,1,5,0.56,Needs more flavor options.,Online Store,3.29,2,In-store Promo,Yes,5,77,Medium
+441,53,Male,High,5,Soft Drinks,1,45,5,5,1,4,1,0.24,Great taste but packaging could be improved.,Gym,4.25,2,Social Media,Yes,3,37,Medium
+442,35,Male,Low,7,,1,143,3,3,4,3,3,0.36,Convenience of availability is key.,Cafe,4.34,1,Social Media,No,2,0,High
+443,49,Female,Medium,2,,1,52,4,5,3,1,2,0.54,Convenience of availability is key.,Supermarket,3.54,5,Word of Mouth,Yes,4,37,High
+444,41,Male,Medium,8,Water,0,103,2,5,3,3,5,0.42,Price is a concern for students like me.,Supermarket,4.19,2,Word of Mouth,No,1,84,Medium
+445,40,Female,Medium,6,Water,0,101,5,4,4,4,3,0.33,Too expensive compared to other drinks.,Convenience Store,3.49,1,TV,No,2,28,High
+446,49,Male,Low,8,Water,1,138,4,2,3,3,2,0.55,Sounds great! Would definitely try.,Convenience Store,3.4,2,Word of Mouth,Yes,1,4,Low
+447,54,Male,High,1,Soft Drinks,1,58,4,1,2,1,4,0.43,Love the natural ingredients.,Gym,3.09,3,TV,Yes,2,73,Low
+448,29,Male,Medium,1,Soft Drinks,1,115,2,2,2,1,4,0.38,Sounds great! Would definitely try.,Gym,3.76,5,Social Media,No,2,91,Low
+449,30,Female,Low,7,Juices,1,119,5,5,3,3,2,0.52,Not really interested in energy drinks.,Online Store,0.79,4,Online Ads,Yes,5,20,Medium
+450,40,Female,Low,8,Water,0,82,4,2,3,2,1,0.29,Love the natural ingredients.,Online Store,4.4,2,In-store Promo,No,4,70,Medium
+451,42,Female,Low,3,,1,113,4,4,2,4,2,0.85,Convenience of availability is key.,Gym,4.36,3,Social Media,Yes,4,66,Medium
+452,52,Male,Medium,5,Energy Drinks,0,128,1,1,3,4,2,0.81,Sounds great! Would definitely try.,Gym,0.15,4,Word of Mouth,Yes,2,46,High
+453,47,Female,Medium,1,Juices,1,59,4,4,3,3,1,0.7,Not sure if I would switch from my current brand.,Cafe,4.13,4,In-store Promo,Yes,3,83,Medium
+454,34,Male,High,7,Soft Drinks,1,134,1,1,4,2,1,0.27,Too expensive compared to other drinks.,Convenience Store,0.64,2,Online Ads,No,3,82,Medium
+455,37,Male,Medium,5,Juices,1,107,5,5,1,1,3,0.74,Sounds great! Would definitely try.,Online Store,1.68,1,Online Ads,Yes,1,34,Low
+456,42,Female,Low,8,Juices,1,83,5,1,2,5,3,0.77,Too expensive compared to other drinks.,Convenience Store,3.72,2,TV,No,1,67,Low
+457,39,Male,Medium,8,Juices,0,62,5,1,4,5,1,0.74,Great taste but packaging could be improved.,Convenience Store,0.8,3,In-store Promo,Yes,5,68,Medium
+458,30,Male,Medium,9,Juices,1,41,3,1,1,3,4,0.28,Not really interested in energy drinks.,Gym,4.09,4,TV,No,2,0,Medium
+459,36,Male,Low,7,Energy Drinks,0,61,5,2,3,2,4,0.65,Too expensive compared to other drinks.,Cafe,4.16,2,Social Media,No,1,67,High
+460,53,Male,Low,1,Water,1,96,4,2,3,2,2,0.78,Great taste but packaging could be improved.,Supermarket,2.54,1,In-store Promo,Yes,1,11,Low
+461,29,Male,Low,3,,0,140,2,5,4,4,5,0.6,Needs more flavor options.,Cafe,0.03,2,Social Media,Yes,2,59,Low
+462,36,Female,Medium,8,Juices,1,111,1,1,3,1,2,0.65,Great taste but packaging could be improved.,Cafe,1.44,5,TV,No,5,26,Medium
+463,29,Male,Medium,3,Juices,1,46,3,3,5,2,2,0.52,Not really interested in energy drinks.,Convenience Store,3.08,1,In-store Promo,Yes,1,55,Low
+464,26,Female,Medium,8,Juices,0,117,5,5,4,5,5,0.57,Price is a concern for students like me.,Cafe,4.91,3,TV,No,5,22,Low
+465,24,Female,High,1,Water,0,95,5,1,1,1,1,0.22,Needs more flavor options.,Online Store,3.16,4,In-store Promo,Yes,4,24,High
+466,45,Male,High,5,Soft Drinks,1,106,2,1,4,1,4,0.65,Convenience of availability is key.,Convenience Store,1.3,2,TV,No,5,20,Low
+467,31,Male,Medium,4,Soft Drinks,1,55,2,2,2,3,2,0.26,I love the idea of a healthy energy drink.,Online Store,3.17,1,Online Ads,No,3,60,Medium
+468,48,Male,High,5,Energy Drinks,0,122,3,5,4,2,5,0.5,Great taste but packaging could be improved.,Supermarket,2.7,5,TV,No,3,62,Low
+469,36,Female,Low,8,Soft Drinks,0,90,1,1,3,3,3,0.4,Great taste but packaging could be improved.,Convenience Store,3.9,1,Online Ads,Yes,5,51,Low
+470,33,Male,Low,10,Juices,0,121,5,1,3,2,2,0.58,Too expensive compared to other drinks.,Supermarket,0.53,5,TV,Yes,3,87,Medium
+471,22,Female,Low,4,Juices,1,119,3,5,5,4,4,0.29,Convenience of availability is key.,Convenience Store,3.81,3,In-store Promo,Yes,4,24,High
+472,52,Male,Low,4,Juices,1,111,4,3,5,3,1,0.68,Sounds great! Would definitely try.,Gym,2.71,4,In-store Promo,Yes,2,54,Medium
+473,29,Female,Medium,3,Energy Drinks,0,136,4,5,5,3,2,0.76,Not sure if I would switch from my current brand.,Cafe,4.81,3,In-store Promo,Yes,3,45,High
+474,42,Male,High,7,Juices,0,51,3,5,1,5,2,0.31,Love the natural ingredients.,Gym,1.71,2,Word of Mouth,Yes,3,31,Low
+475,38,Male,Low,3,Soft Drinks,0,92,5,3,5,3,5,0.27,Great taste but packaging could be improved.,Supermarket,3.16,1,Social Media,No,5,54,High
+476,53,Other,Low,3,Water,0,114,3,5,1,2,3,0.3,Sounds great! Would definitely try.,Cafe,4.66,5,In-store Promo,Yes,4,95,Low
+477,40,Female,Medium,10,Water,1,44,5,1,5,5,3,0.81,Not sure if I would switch from my current brand.,Convenience Store,0.51,5,Online Ads,Yes,2,4,Medium
+478,33,Male,High,5,,0,66,2,5,1,3,1,0.57,Love the natural ingredients.,Cafe,4.69,1,In-store Promo,No,5,35,Medium
+479,31,Female,Medium,5,Soft Drinks,0,51,3,3,4,3,4,0.53,I love the idea of a healthy energy drink.,Online Store,3.44,1,Word of Mouth,Yes,5,48,High
+480,48,Female,Medium,6,Juices,1,56,5,4,4,4,1,0.27,Too expensive compared to other drinks.,Cafe,0.34,2,Online Ads,Yes,4,57,Medium
+481,22,Female,Low,8,Water,0,45,3,5,3,3,2,0.65,Sounds great! Would definitely try.,Online Store,1.5,3,Word of Mouth,No,2,38,Low
+482,52,Female,Low,10,Soft Drinks,1,136,3,2,1,1,2,0.81,Too expensive compared to other drinks.,Cafe,3.54,5,Online Ads,No,4,79,Low
+483,40,Male,High,6,Water,1,44,5,1,2,5,3,0.78,Love the natural ingredients.,Online Store,0.34,2,TV,Yes,2,96,High
+484,46,Male,High,1,Juices,1,96,5,1,3,1,4,0.64,Price is a concern for students like me.,Supermarket,2.91,3,Social Media,Yes,4,84,Medium
+485,28,Male,Low,8,Water,1,67,1,2,4,5,5,0.25,Great taste but packaging could be improved.,Gym,1.73,2,Social Media,No,5,60,High
+486,35,Female,High,8,,1,117,3,2,1,4,4,0.28,Needs more flavor options.,Convenience Store,3.1,5,Word of Mouth,Yes,5,8,Low
+487,29,Female,Medium,9,,1,108,4,5,5,3,2,0.23,Not sure if I would switch from my current brand.,Cafe,0.23,1,Social Media,Yes,1,5,Medium
+488,26,Male,High,9,Water,1,98,3,2,2,3,5,0.38,Convenience of availability is key.,Gym,4.36,1,Word of Mouth,Yes,3,34,Low
+489,27,Male,Medium,2,Soft Drinks,1,72,3,4,4,3,4,0.29,Not really interested in energy drinks.,Convenience Store,4.87,3,Word of Mouth,Yes,4,38,High
+490,34,Female,Medium,2,Soft Drinks,1,101,5,3,3,5,4,0.38,Great taste but packaging could be improved.,Convenience Store,4.84,4,Word of Mouth,Yes,1,21,Medium
+491,24,Other,Medium,3,Soft Drinks,1,89,3,2,1,3,5,0.47,Needs more flavor options.,Online Store,3.75,3,Social Media,Yes,3,40,High
+492,30,Female,Medium,1,Water,0,144,3,2,2,1,2,0.86,Not really interested in energy drinks.,Supermarket,0.65,4,Word of Mouth,No,4,4,Low
+493,26,Male,Low,4,Soft Drinks,0,58,4,4,1,3,4,0.63,Sounds great! Would definitely try.,Supermarket,3.79,2,Social Media,No,2,41,Medium
+494,44,Male,Low,4,Juices,0,125,5,1,5,4,5,0.78,Not really interested in energy drinks.,Gym,0.12,2,Word of Mouth,Yes,3,86,Medium
+495,19,Male,Medium,9,,1,108,3,1,3,1,2,0.7,I love the idea of a healthy energy drink.,Supermarket,0.11,5,In-store Promo,No,5,80,Medium
+496,22,Other,Medium,9,Juices,1,105,2,5,1,3,5,0.28,Great taste but packaging could be improved.,Cafe,1.62,4,Word of Mouth,No,1,75,High
+497,46,Male,Low,9,Soft Drinks,1,133,1,4,4,3,5,0.72,Too expensive compared to other drinks.,Supermarket,2.44,5,Online Ads,Yes,3,86,High
+498,54,Female,Medium,10,Juices,1,86,4,3,3,2,4,0.39,Price is a concern for students like me.,Gym,3.85,1,Word of Mouth,Yes,3,79,High
+499,36,Male,High,7,Soft Drinks,1,78,3,3,4,5,2,0.65,Convenience of availability is key.,Supermarket,3.42,4,TV,No,5,66,High
+500,25,Female,Low,2,Water,0,107,2,4,1,1,4,0.44,Too expensive compared to other drinks.,Cafe,2.23,3,Word of Mouth,Yes,4,29,Low
