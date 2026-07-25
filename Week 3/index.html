@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniCode — Omni Channel Marketing Code Generator</title>
+    <meta name="description" content="Generate Python code for Omni Channel Marketing Attribution Models. Upload your dataset and get production-ready code instantly.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ========== CSS RESET & VARIABLES ========== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-secondary: #111827;
+            --bg-card: rgba(17, 24, 39, 0.7);
+            --bg-card-hover: rgba(30, 41, 59, 0.8);
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --accent-1: #6366f1;
+            --accent-2: #8b5cf6;
+            --accent-3: #a78bfa;
+            --accent-gradient: linear-gradient(135deg, #6366f1, #8b5cf6, #a78bfa);
+            --accent-glow: rgba(99, 102, 241, 0.3);
+            --teal: #2dd4bf;
+            --teal-glow: rgba(45, 212, 191, 0.2);
+            --amber: #fbbf24;
+            --rose: #f43f5e;
+            --emerald: #10b981;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: rgba(255, 255, 255, 0.06);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+            --shadow-md: 0 8px 32px rgba(0,0,0,0.4);
+            --shadow-lg: 0 16px 64px rgba(0,0,0,0.5);
+            --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.15);
+            --font-body: 'Inter', -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ========== BASE ========== */
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ========== ANIMATED BACKGROUND ========== */
+        .bg-effects {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 0; overflow: hidden;
+        }
+        .bg-effects .orb {
+            position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.15;
+            animation: orbFloat 20s ease-in-out infinite;
+        }
+        .bg-effects .orb:nth-child(1) {
+            width: 600px; height: 600px; top: -10%; left: -10%;
+            background: var(--accent-1); animation-delay: 0s;
+        }
+        .bg-effects .orb:nth-child(2) {
+            width: 500px; height: 500px; top: 50%; right: -10%;
+            background: var(--accent-2); animation-delay: -7s;
+        }
+        .bg-effects .orb:nth-child(3) {
+            width: 400px; height: 400px; bottom: -10%; left: 30%;
+            background: var(--teal); animation-delay: -14s; opacity: 0.1;
+        }
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -40px) scale(1.05); }
+            50% { transform: translate(-20px, 20px) scale(0.95); }
+            75% { transform: translate(40px, 30px) scale(1.02); }
+        }
+
+        .grid-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none; z-index: 0;
+        }
+
+        /* ========== PARTICLES ========== */
+        #particles-canvas {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0; pointer-events: none;
+        }
+
+        /* ========== LAYOUT ========== */
+        .app-container {
+            position: relative; z-index: 1;
+            max-width: 1200px; margin: 0 auto; padding: 0 20px;
+            width: 100%;
+        }
+
+        /* ========== NAV ========== */
+        .top-nav {
+            position: sticky; top: 0; z-index: 100;
+            backdrop-filter: blur(20px) saturate(1.5);
+            background: rgba(10, 14, 26, 0.85);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 0 20px;
+        }
+        .top-nav .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 64px;
+        }
+        .nav-brand {
+            display: flex; align-items: center; gap: 10px;
+            font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px;
+            text-decoration: none; color: var(--text-primary);
+        }
+        .nav-brand .logo-icon {
+            width: 36px; height: 36px; border-radius: var(--radius-sm);
+            background: var(--accent-gradient);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; box-shadow: var(--shadow-glow);
+            flex-shrink: 0;
+        }
+        .nav-links {
+            display: flex; gap: 4px; list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-secondary); text-decoration: none;
+            padding: 8px 14px; border-radius: var(--radius-sm);
+            font-size: 0.85rem; font-weight: 500;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        .nav-links a:hover { color: var(--text-primary); background: var(--glass); }
+        .nav-links a.active { color: var(--accent-3); background: rgba(99,102,241,0.1); }
+
+        /* Mobile hamburger */
+        .nav-toggle {
+            display: none; background: none; border: none;
+            color: var(--text-primary); font-size: 1.5rem; cursor: pointer;
+            padding: 4px;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            text-align: center; padding: 80px 0 50px;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 6px 16px 6px 8px;
+            background: rgba(99,102,241,0.1);
+            border: 1px solid rgba(99,102,241,0.2);
+            border-radius: 999px; font-size: 0.78rem; font-weight: 500;
+            color: var(--accent-3); margin-bottom: 24px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        .hero-badge .dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--emerald);
+            box-shadow: 0 0 8px var(--emerald);
+            animation: pulse 2s infinite;
+            flex-shrink: 0;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.3); }
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.8rem);
+            font-weight: 900; letter-spacing: -1.5px;
+            line-height: 1.1; margin-bottom: 20px;
+            animation: fadeInUp 0.6s ease-out 0.1s both;
+        }
+        .hero h1 .gradient-text {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero .subtitle {
+            font-size: clamp(0.95rem, 2vw, 1.15rem); color: var(--text-secondary);
+            max-width: 640px; margin: 0 auto 36px;
+            font-weight: 400; line-height: 1.7;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+            padding: 0 12px;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ========== STATS ROW ========== */
+        .stats-row {
+            display: flex; justify-content: center; gap: 32px;
+            margin-bottom: 50px;
+            animation: fadeInUp 0.6s ease-out 0.3s both;
+            flex-wrap: wrap;
+        }
+        .stat-item { text-align: center; min-width: 80px; }
+        .stat-item .stat-val {
+            font-size: 1.6rem; font-weight: 800; letter-spacing: -1px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .stat-item .stat-label {
+            font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;
+            letter-spacing: 1px; font-weight: 600; margin-top: 4px;
+        }
+
+        /* ========== CARD / GLASS PANEL ========== */
+        .glass-panel {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            min-width: 0;
+            overflow: hidden;
+        }
+        .glass-panel:hover {
+            border-color: rgba(99,102,241,0.15);
+        }
+
+        /* ========== SECTION HEADERS ========== */
+        .section-header {
+            display: flex; align-items: center; gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .section-header .icon-wrap {
+            width: 38px; height: 38px; border-radius: var(--radius-sm);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; flex-shrink: 0;
+        }
+        .section-header .icon-wrap.purple { background: rgba(99,102,241,0.15); }
+        .section-header .icon-wrap.teal { background: var(--teal-glow); }
+        .section-header .icon-wrap.amber { background: rgba(251,191,36,0.15); }
+        .section-header .icon-wrap.rose { background: rgba(244,63,94,0.15); }
+        .section-header h2 {
+            font-size: 1.1rem; font-weight: 700; letter-spacing: -0.3px;
+        }
+        .section-header .step-badge {
+            margin-left: auto;
+            font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1.5px; color: var(--text-muted);
+            background: var(--glass);
+            padding: 4px 10px; border-radius: 999px;
+            border: 1px solid var(--border);
+            white-space: nowrap;
+        }
+
+        /* ========== MAIN GRID ========== */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        /* ========== FILE UPLOAD ========== */
+        .upload-zone {
+            border: 2px dashed rgba(99,102,241,0.3);
+            border-radius: var(--radius-lg);
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            background: rgba(99,102,241,0.03);
+            position: relative; overflow: hidden;
+        }
+        .upload-zone:hover, .upload-zone.drag-over {
+            border-color: var(--accent-1);
+            background: rgba(99,102,241,0.08);
+            transform: translateY(-2px);
+        }
+        .upload-zone.has-file {
+            border-color: var(--emerald);
+            background: rgba(16,185,129,0.05);
+        }
+        .upload-zone .upload-icon { font-size: 2.5rem; margin-bottom: 12px; }
+        .upload-zone h3 {
+            font-size: 1rem; font-weight: 600; margin-bottom: 6px;
+        }
+        .upload-zone p {
+            color: var(--text-muted); font-size: 0.85rem;
+        }
+        .upload-zone .browse-btn {
+            display: inline-block; margin-top: 14px;
+            padding: 10px 24px; border-radius: var(--radius-sm);
+            background: var(--accent-gradient); color: #fff;
+            font-weight: 600; font-size: 0.85rem;
+            border: none; cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 16px var(--accent-glow);
+        }
+        .upload-zone .browse-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 24px var(--accent-glow);
+        }
+        .file-input { display: none; }
+
+        .file-info {
+            display: none; align-items: center; gap: 12px;
+            padding: 14px; background: rgba(16,185,129,0.08);
+            border: 1px solid rgba(16,185,129,0.2);
+            border-radius: var(--radius-md); margin-top: 16px;
+            flex-wrap: wrap;
+        }
+        .file-info.visible { display: flex; }
+        .file-info .file-icon { font-size: 1.5rem; flex-shrink: 0; }
+        .file-info .file-details { flex: 1; text-align: left; min-width: 120px; }
+        .file-info .file-name { font-weight: 600; font-size: 0.88rem; word-break: break-all; }
+        .file-info .file-meta { color: var(--text-muted); font-size: 0.78rem; }
+        .file-info .remove-btn {
+            background: none; border: none; color: var(--rose);
+            cursor: pointer; font-size: 1.2rem; padding: 4px;
+            transition: var(--transition); flex-shrink: 0;
+        }
+        .file-info .remove-btn:hover { transform: scale(1.2); }
+
+        /* ========== DATA PREVIEW ========== */
+        .data-preview {
+            display: none; margin-top: 20px;
+        }
+        .data-preview.visible { display: block; }
+        .preview-table-wrap {
+            overflow-x: auto; border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            -webkit-overflow-scrolling: touch;
+        }
+        .preview-table {
+            width: 100%; border-collapse: collapse;
+            font-size: 0.78rem; font-family: var(--font-mono);
+            min-width: 500px;
+        }
+        .preview-table th {
+            background: rgba(99,102,241,0.1);
+            color: var(--accent-3); font-weight: 600;
+            padding: 10px 12px; text-align: left;
+            white-space: nowrap; border-bottom: 1px solid var(--border);
+            position: sticky; top: 0;
+        }
+        .preview-table td {
+            padding: 8px 12px; border-bottom: 1px solid var(--border);
+            color: var(--text-secondary); white-space: nowrap;
+        }
+        .preview-table tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+        .preview-label {
+            font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        /* ========== STEP 2 & 3 CONTAINER ========== */
+        .steps-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        /* ========== COLUMN MAPPING ========== */
+        .mapping-grid {
+            display: grid; grid-template-columns: 1fr; gap: 14px;
+        }
+        .form-group { display: flex; flex-direction: column; gap: 6px; }
+        .form-group label {
+            font-size: 0.78rem; font-weight: 600; color: var(--text-secondary);
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .form-group label .required { color: var(--rose); }
+        .form-group .hint {
+            font-size: 0.72rem; color: var(--text-muted); font-weight: 400;
+            text-transform: none; letter-spacing: 0;
+        }
+
+        select, input[type="text"] {
+            width: 100%; padding: 10px 12px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 0.88rem;
+            transition: var(--transition);
+            appearance: none;
+            -webkit-appearance: none;
+        }
+        select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2394a3b8' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 32px;
+            cursor: pointer;
+        }
+        select:focus, input[type="text"]:focus {
+            outline: none;
+            border-color: var(--accent-1);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+        }
+        select option { background: var(--bg-secondary); color: var(--text-primary); }
+
+        /* ========== MODEL SELECT ========== */
+        .model-cards {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+        }
+        .model-card {
+            padding: 14px; border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            background: var(--glass);
+            cursor: pointer; transition: var(--transition);
+            position: relative; overflow: hidden;
+        }
+        .model-card::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: var(--accent-gradient);
+            opacity: 0; transition: var(--transition);
+        }
+        .model-card:hover {
+            border-color: rgba(99,102,241,0.3);
+            background: rgba(99,102,241,0.05);
+            transform: translateY(-2px);
+        }
+        .model-card.selected {
+            border-color: var(--accent-1);
+            background: rgba(99,102,241,0.08);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+        .model-card.selected::before { opacity: 1; }
+        .model-card .card-icon { font-size: 1.3rem; margin-bottom: 6px; }
+        .model-card .card-title {
+            font-weight: 700; font-size: 0.9rem; margin-bottom: 4px;
+        }
+        .model-card .card-desc {
+            font-size: 0.74rem; color: var(--text-muted); line-height: 1.5;
+        }
+        .model-card .check-mark {
+            position: absolute; top: 10px; right: 10px;
+            width: 20px; height: 20px; border-radius: 50%;
+            border: 2px solid var(--border);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.65rem; transition: var(--transition);
+            color: transparent;
+        }
+        .model-card.selected .check-mark {
+            background: var(--accent-1); border-color: var(--accent-1);
+            color: #fff;
+        }
+
+        /* ========== GENERATE BUTTON ========== */
+        .generate-section {
+            text-align: center; margin: 28px 0;
+        }
+        .btn-generate {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 44px;
+            background: var(--accent-gradient);
+            color: #fff; font-weight: 700; font-size: 1rem;
+            border: none; border-radius: var(--radius-xl);
+            cursor: pointer; transition: var(--transition);
+            box-shadow: 0 8px 32px var(--accent-glow);
+            letter-spacing: -0.3px;
+            position: relative; overflow: hidden;
+        }
+        .btn-generate::before {
+            content: ''; position: absolute; top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            transition: left 0.5s;
+        }
+        .btn-generate:hover::before { left: 100%; }
+        .btn-generate:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 48px var(--accent-glow);
+        }
+        .btn-generate:active { transform: translateY(-1px); }
+        .btn-generate:disabled {
+            opacity: 0.4; cursor: not-allowed;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+        .btn-generate .btn-icon { font-size: 1.2rem; }
+
+        /* ========== SELECT ALL BUTTON ========== */
+        .select-all-wrap { margin-top: 14px; }
+        .btn-select-all {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 10px 18px;
+            background: linear-gradient(135deg, var(--teal), #06b6d4);
+            color: #fff; font-weight: 600; font-size: 0.82rem;
+            border: none; border-radius: var(--radius-sm);
+            cursor: pointer; transition: var(--transition);
+        }
+        .btn-select-all:hover { transform: translateY(-1px); box-shadow: 0 4px 16px var(--teal-glow); }
+
+        /* ========== CODE OUTPUT ========== */
+        .code-output-section {
+            display: none;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .code-output-section.visible { display: block; }
+
+        .code-toolbar {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 12px 16px;
+            background: rgba(99,102,241,0.08);
+            border-bottom: 1px solid var(--border);
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+            flex-wrap: wrap; gap: 8px;
+        }
+        .code-toolbar .lang-badge {
+            display: flex; align-items: center; gap: 6px;
+            font-size: 0.78rem; font-weight: 600; color: var(--accent-3);
+        }
+        .code-toolbar .lang-badge .lang-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--amber); flex-shrink: 0;
+        }
+        .code-toolbar-actions {
+            display: flex; gap: 8px;
+        }
+        .toolbar-btn {
+            display: flex; align-items: center; gap: 6px;
+            padding: 6px 12px; border-radius: var(--radius-sm);
+            background: rgba(255,255,255,0.06);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.78rem; font-weight: 500;
+            cursor: pointer; transition: var(--transition);
+            font-family: var(--font-body);
+            white-space: nowrap;
+        }
+        .toolbar-btn:hover {
+            background: rgba(255,255,255,0.1);
+            color: var(--text-primary);
+        }
+        .toolbar-btn.copied {
+            background: rgba(16,185,129,0.15);
+            color: var(--emerald);
+            border-color: rgba(16,185,129,0.3);
+        }
+
+        .code-block-wrap {
+            background: #0d1117;
+            border: 1px solid var(--border);
+            border-top: none;
+            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+            overflow: hidden;
+        }
+        .code-block {
+            padding: 20px; overflow-x: auto;
+            max-height: 600px; overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .code-block pre {
+            font-family: var(--font-mono);
+            font-size: 0.82rem; line-height: 1.8;
+            white-space: pre; color: #e6edf3;
+            counter-reset: line;
+        }
+
+        /* Syntax Highlighting */
+        .code-block .kw { color: #ff7b72; }
+        .code-block .fn { color: #d2a8ff; }
+        .code-block .str { color: #a5d6ff; }
+        .code-block .cm { color: #8b949e; font-style: italic; }
+        .code-block .num { color: #79c0ff; }
+        .code-block .op { color: #ff7b72; }
+        .code-block .var { color: #ffa657; }
+        .code-block .imp { color: #ff7b72; }
+        .code-block .cls { color: #7ee787; }
+
+        /* ========== INDIVIDUAL CODE CELLS ========== */
+        .code-cells-container {
+            display: flex; flex-direction: column; gap: 16px;
+        }
+        .code-cell {
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .code-cell:hover {
+            border-color: rgba(99,102,241,0.25);
+        }
+        .code-cell-header {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 8px 14px;
+            background: rgba(99,102,241,0.06);
+            border-bottom: 1px solid var(--border);
+            gap: 8px;
+        }
+        .cell-label {
+            display: flex; align-items: center; gap: 8px;
+            font-size: 0.75rem; font-weight: 600; color: var(--text-muted);
+            white-space: nowrap;
+        }
+        .cell-number {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 22px; height: 22px; border-radius: 6px;
+            background: rgba(99,102,241,0.15); color: var(--accent-3);
+            font-size: 0.7rem; font-weight: 700;
+            font-family: var(--font-mono);
+        }
+        .cell-title {
+            color: var(--text-secondary); font-weight: 500;
+            overflow: hidden; text-overflow: ellipsis;
+        }
+        .cell-copy-btn {
+            display: flex; align-items: center; gap: 5px;
+            padding: 5px 12px; border-radius: 6px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.72rem; font-weight: 600;
+            cursor: pointer; transition: var(--transition);
+            font-family: var(--font-body);
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .cell-copy-btn:hover {
+            background: rgba(255,255,255,0.1);
+            color: var(--text-primary);
+            border-color: rgba(99,102,241,0.3);
+        }
+        .cell-copy-btn.copied {
+            background: rgba(16,185,129,0.15);
+            color: var(--emerald);
+            border-color: rgba(16,185,129,0.3);
+        }
+        .code-cell .code-block-wrap {
+            border: none; border-radius: 0;
+        }
+        .code-cell .code-block {
+            padding: 14px 16px;
+            max-height: 400px;
+        }
+        .code-cell .code-block pre {
+            font-size: 0.8rem; line-height: 1.75;
+        }
+
+        /* Global toolbar above cells */
+        .global-code-toolbar {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 14px 18px;
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            margin-bottom: 16px;
+            flex-wrap: wrap; gap: 10px;
+        }
+        .global-code-toolbar .lang-badge {
+            display: flex; align-items: center; gap: 6px;
+            font-size: 0.8rem; font-weight: 600; color: var(--accent-3);
+        }
+        .global-code-toolbar .lang-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--amber); flex-shrink: 0;
+        }
+        .global-toolbar-actions {
+            display: flex; gap: 8px;
+        }
+
+        /* ========== CELL EXPLANATIONS ========== */
+        .cell-explanation {
+            padding: 12px 16px;
+            background: rgba(45, 212, 191, 0.04);
+            border-top: 1px solid rgba(45, 212, 191, 0.1);
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        .cell-explanation .exp-icon {
+            flex-shrink: 0;
+            font-size: 0.9rem;
+            margin-top: 1px;
+        }
+        .cell-explanation .exp-text {
+            flex: 1;
+        }
+        .cell-explanation strong {
+            color: var(--teal);
+            font-weight: 600;
+        }
+        .cell-explanation code {
+            background: rgba(255,255,255,0.06);
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            color: var(--accent-3);
+        }
+
+        /* ========== REPORT SECTION ========== */
+        .report-section {
+            display: none;
+            animation: fadeInUp 0.5s ease-out;
+            margin-top: 32px;
+        }
+        .report-section.visible { display: block; }
+
+        .report-panel {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .report-header {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 16px 20px;
+            background: rgba(45, 212, 191, 0.06);
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap; gap: 10px;
+        }
+        .report-header .report-title {
+            display: flex; align-items: center; gap: 8px;
+            font-size: 0.85rem; font-weight: 700; color: var(--teal);
+        }
+        .report-actions {
+            display: flex; gap: 8px;
+        }
+        .report-content {
+            padding: 28px 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .report-content h2 {
+            font-size: 1.15rem; font-weight: 800; margin: 28px 0 12px;
+            color: var(--text-primary); letter-spacing: -0.3px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .report-content h2:first-child { margin-top: 0; }
+        .report-content h3 {
+            font-size: 0.95rem; font-weight: 700; margin: 20px 0 8px;
+            color: var(--accent-3);
+        }
+        .report-content p {
+            font-size: 0.88rem; color: var(--text-secondary); line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        .report-content ul, .report-content ol {
+            margin: 8px 0 16px 20px;
+            font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;
+        }
+        .report-content li { margin-bottom: 4px; }
+
+        .report-table {
+            width: 100%; border-collapse: collapse; margin: 14px 0 20px;
+            font-size: 0.82rem;
+        }
+        .report-table th {
+            background: rgba(99,102,241,0.1);
+            color: var(--accent-3); font-weight: 700;
+            padding: 10px 14px; text-align: left;
+            border-bottom: 2px solid rgba(99,102,241,0.2);
+            white-space: nowrap;
+        }
+        .report-table td {
+            padding: 9px 14px; border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+        .report-table tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+        .report-table .highlight {
+            color: var(--teal); font-weight: 700;
+        }
+
+        .insight-card {
+            padding: 14px 16px;
+            background: rgba(99,102,241,0.05);
+            border: 1px solid rgba(99,102,241,0.12);
+            border-radius: var(--radius-md);
+            margin: 10px 0;
+        }
+        .insight-card .insight-label {
+            font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1px; color: var(--accent-3); margin-bottom: 6px;
+        }
+        .insight-card p { margin-bottom: 0; }
+
+        .recommendation-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+            margin: 14px 0;
+        }
+        .rec-card {
+            padding: 14px 16px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            background: var(--glass);
+        }
+        .rec-card .rec-scenario {
+            font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.5px; margin-bottom: 6px;
+        }
+        .rec-card .rec-scenario.startup { color: var(--emerald); }
+        .rec-card .rec-scenario.ecommerce { color: var(--amber); }
+        .rec-card .rec-scenario.multichannel { color: var(--accent-3); }
+        .rec-card .rec-scenario.b2b { color: var(--rose); }
+        .rec-card .rec-model {
+            font-weight: 700; font-size: 0.9rem; margin-bottom: 4px;
+        }
+        .rec-card .rec-desc {
+            font-size: 0.78rem; color: var(--text-muted); line-height: 1.5;
+        }
+
+        .btn-report {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--teal), #06b6d4);
+            color: #fff; font-weight: 700; font-size: 0.95rem;
+            border: none; border-radius: var(--radius-xl);
+            cursor: pointer; transition: var(--transition);
+            box-shadow: 0 8px 32px var(--teal-glow);
+            letter-spacing: -0.3px;
+        }
+        .btn-report:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 48px var(--teal-glow);
+        }
+        .btn-report:disabled {
+            opacity: 0.4; cursor: not-allowed;
+            transform: none !important; box-shadow: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .recommendation-grid { grid-template-columns: 1fr; }
+            .report-content { padding: 20px 16px; }
+        }
+        @media (max-width: 480px) {
+            .report-content h2 { font-size: 1rem; }
+            .report-table { font-size: 0.75rem; }
+            .report-table th, .report-table td { padding: 7px 10px; }
+        }
+
+        /* ========== TOAST ========== */
+        .toast {
+            position: fixed; bottom: 24px; right: 24px;
+            padding: 14px 20px; border-radius: var(--radius-md);
+            background: var(--bg-secondary);
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+            font-size: 0.88rem; font-weight: 500;
+            box-shadow: var(--shadow-lg);
+            display: flex; align-items: center; gap: 10px;
+            transform: translateY(100px); opacity: 0;
+            transition: var(--transition); z-index: 1000;
+            max-width: 90vw;
+        }
+        .toast.show {
+            transform: translateY(0); opacity: 1;
+        }
+        .toast .toast-icon { font-size: 1.2rem; flex-shrink: 0; }
+
+        /* ========== FEATURE CARDS ========== */
+        .features-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 14px; margin-bottom: 50px;
+        }
+        .feature-card {
+            padding: 20px 16px; border-radius: var(--radius-md);
+            background: var(--glass);
+            border: 1px solid var(--border);
+            text-align: center; transition: var(--transition);
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(99,102,241,0.2);
+            box-shadow: var(--shadow-glow);
+        }
+        .feature-card .feat-icon { font-size: 1.8rem; margin-bottom: 10px; }
+        .feature-card .feat-title {
+            font-weight: 700; font-size: 0.9rem; margin-bottom: 5px;
+        }
+        .feature-card .feat-desc {
+            font-size: 0.78rem; color: var(--text-muted); line-height: 1.5;
+        }
+
+        /* ========== FOOTER ========== */
+        .site-footer {
+            text-align: center; padding: 36px 0;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted); font-size: 0.78rem;
+        }
+        .site-footer .footer-brand {
+            font-weight: 800; font-size: 1rem;
+            color: var(--text-primary); margin-bottom: 6px;
+        }
+
+        /* ========== EXTRA FIELDS ========== */
+        .extra-fields {
+            display: grid; grid-template-columns: 1fr; gap: 14px;
+            margin-top: 16px;
+        }
+
+        /* ========== SCROLLBAR ========== */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.1); border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+        /* ========================================================================
+           RESPONSIVE BREAKPOINTS
+           ======================================================================== */
+
+        /* Tablets & small laptops */
+        @media (max-width: 1024px) {
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .steps-container { grid-template-columns: 1fr; }
+        }
+
+        /* Tablets portrait */
+        @media (max-width: 768px) {
+            .top-nav { padding: 0 16px; }
+            .nav-toggle { display: block; }
+            .nav-links {
+                display: none; flex-direction: column;
+                position: absolute; top: 64px; left: 0; right: 0;
+                background: rgba(10, 14, 26, 0.95);
+                backdrop-filter: blur(20px);
+                border-bottom: 1px solid var(--glass-border);
+                padding: 12px 20px;
+                gap: 4px;
+            }
+            .nav-links.open { display: flex; }
+            .nav-links a { padding: 10px 14px; }
+
+            .hero { padding: 60px 0 40px; }
+            .stats-row { gap: 20px; }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+
+            .model-cards { grid-template-columns: 1fr 1fr; }
+            .mapping-grid { grid-template-columns: 1fr; }
+            .extra-fields { grid-template-columns: 1fr; }
+
+            .glass-panel { padding: 22px 18px; }
+
+            .btn-generate { padding: 14px 32px; font-size: 0.95rem; }
+
+            .code-toolbar { padding: 10px 14px; }
+            .code-block { padding: 16px; }
+            .code-block pre { font-size: 0.75rem; }
+        }
+
+        /* Mobile phones */
+        @media (max-width: 480px) {
+            .app-container { padding: 0 14px; }
+
+            .hero { padding: 48px 0 32px; }
+            .hero h1 { font-size: 1.75rem; letter-spacing: -0.8px; }
+            .hero .subtitle { font-size: 0.9rem; margin-bottom: 28px; }
+            .hero-badge { font-size: 0.7rem; padding: 5px 12px 5px 7px; }
+
+            .stats-row { gap: 16px; }
+            .stat-item .stat-val { font-size: 1.3rem; }
+            .stat-item .stat-label { font-size: 0.65rem; }
+
+            .features-grid { grid-template-columns: 1fr; gap: 10px; }
+            .feature-card { padding: 16px 14px; }
+
+            .steps-container { grid-template-columns: 1fr; }
+            .model-cards { grid-template-columns: 1fr; }
+
+            .glass-panel { padding: 18px 14px; border-radius: var(--radius-md); }
+            .section-header h2 { font-size: 1rem; }
+
+            .upload-zone { padding: 30px 16px; }
+            .upload-zone .upload-icon { font-size: 2rem; }
+
+            .btn-generate { padding: 14px 28px; font-size: 0.9rem; width: 100%; justify-content: center; }
+
+            .code-toolbar-actions { flex-wrap: wrap; }
+            .toolbar-btn { padding: 6px 10px; font-size: 0.72rem; }
+
+            .code-block pre { font-size: 0.7rem; line-height: 1.7; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Effects -->
+    <div class="bg-effects">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <div class="grid-overlay"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">
+                <div class="logo-icon">⚡</div>
+                OmniCode
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#generator" class="active">Generator</a></li>
+                <li><a href="#models-section">Models</a></li>
+                <li><a href="#output-section">Output</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="app-container">
+
+        <!-- Hero -->
+        <section class="hero" id="generator">
+            <div class="hero-badge">
+                <div class="dot"></div>
+                Omni Channel Marketing Intelligence
+            </div>
+            <h1>Generate Attribution<br><span class="gradient-text">Code Instantly</span></h1>
+            <p class="subtitle">
+                Upload your marketing dataset, select an attribution model, and get production-ready
+                Python code — no programming skills required.
+            </p>
+        </section>
+
+        <!-- Stats -->
+        <div class="stats-row">
+            <div class="stat-item">
+                <div class="stat-val">4</div>
+                <div class="stat-label">Attribution Models</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-val">30+</div>
+                <div class="stat-label">Code Lines Generated</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-val">0</div>
+                <div class="stat-label">Coding Required</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-val">CSV</div>
+                <div class="stat-label">Dataset Format</div>
+            </div>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feat-icon">📤</div>
+                <div class="feat-title">Upload Dataset</div>
+                <div class="feat-desc">Drag & drop your CSV file or browse to upload</div>
+            </div>
+            <div class="feature-card">
+                <div class="feat-icon">🎯</div>
+                <div class="feat-title">Pick Model</div>
+                <div class="feat-desc">Choose from 4 industry-standard attribution models</div>
+            </div>
+            <div class="feature-card">
+                <div class="feat-icon">⚙️</div>
+                <div class="feat-title">Map Columns</div>
+                <div class="feat-desc">Auto-detected columns mapped to your data</div>
+            </div>
+            <div class="feature-card">
+                <div class="feat-icon">📋</div>
+                <div class="feat-title">Copy Code</div>
+                <div class="feat-desc">One-click copy of ready-to-run Python code</div>
+            </div>
+        </div>
+
+        <!-- Main Generator -->
+        <div class="main-grid">
+
+            <!-- Step 1: Upload -->
+            <div class="glass-panel" id="step-upload">
+                <div class="section-header">
+                    <div class="icon-wrap purple">📂</div>
+                    <h2>Upload Your Dataset</h2>
+                    <span class="step-badge">Step 1</span>
+                </div>
+                <div class="upload-zone" id="upload-zone">
+                    <div class="upload-icon">📊</div>
+                    <h3>Drop your CSV file here</h3>
+                    <p>or click to browse your computer</p>
+                    <button class="browse-btn" type="button">Browse Files</button>
+                    <input type="file" class="file-input" id="file-input" accept=".csv">
+                </div>
+                <div class="file-info" id="file-info">
+                    <div class="file-icon">📄</div>
+                    <div class="file-details">
+                        <div class="file-name" id="file-name">—</div>
+                        <div class="file-meta" id="file-meta">—</div>
+                    </div>
+                    <button class="remove-btn" id="remove-file" title="Remove file">✕</button>
+                </div>
+
+                <!-- Data Preview -->
+                <div class="data-preview" id="data-preview">
+                    <div class="preview-label">📋 Data Preview (first 5 rows)</div>
+                    <div class="preview-table-wrap">
+                        <table class="preview-table" id="preview-table"></table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Steps 2 & 3: Side by side (or stacked on mobile) -->
+            <div class="steps-container">
+
+                <!-- Step 2: Choose Model -->
+                <div class="glass-panel" id="models-section">
+                    <div class="section-header">
+                        <div class="icon-wrap teal">🧠</div>
+                        <h2>Choose Attribution Model</h2>
+                        <span class="step-badge">Step 2</span>
+                    </div>
+                    <div class="model-cards" id="model-cards">
+                        <div class="model-card" data-model="first_touch" onclick="selectModel(this)">
+                            <div class="check-mark">✓</div>
+                            <div class="card-icon">🥇</div>
+                            <div class="card-title">First Touch</div>
+                            <div class="card-desc">100% credit to the first channel that initiated the journey</div>
+                        </div>
+                        <div class="model-card" data-model="last_touch" onclick="selectModel(this)">
+                            <div class="check-mark">✓</div>
+                            <div class="card-icon">🏁</div>
+                            <div class="card-title">Last Touch</div>
+                            <div class="card-desc">100% credit to the final channel before conversion</div>
+                        </div>
+                        <div class="model-card" data-model="linear" onclick="selectModel(this)">
+                            <div class="check-mark">✓</div>
+                            <div class="card-icon">⚖️</div>
+                            <div class="card-title">Linear</div>
+                            <div class="card-desc">Equal credit distributed across all touchpoints in the journey</div>
+                        </div>
+                        <div class="model-card" data-model="time_decay" onclick="selectModel(this)">
+                            <div class="check-mark">✓</div>
+                            <div class="card-icon">⏳</div>
+                            <div class="card-title">Time Decay</div>
+                            <div class="card-desc">More credit to touchpoints closer to conversion</div>
+                        </div>
+                    </div>
+                    <div class="select-all-wrap">
+                        <button class="btn-select-all" onclick="selectAllModels()">
+                            ✨ Generate All Models
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Column Mapping -->
+                <div class="glass-panel" id="step-mapping">
+                    <div class="section-header">
+                        <div class="icon-wrap amber">🔗</div>
+                        <h2>Map Your Columns</h2>
+                        <span class="step-badge">Step 3</span>
+                    </div>
+                    <p style="font-size: 0.83rem; color: var(--text-muted); margin-bottom: 18px; line-height: 1.6;">
+                        Select which columns from your dataset map to the required fields. Columns are auto-detected when you upload a CSV.
+                    </p>
+                    <div class="mapping-grid">
+                        <div class="form-group">
+                            <label>Path Column <span class="required">*</span></label>
+                            <select id="col-path"><option value="">Upload CSV first…</option></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Revenue Column <span class="required">*</span></label>
+                            <select id="col-revenue"><option value="">Upload CSV first…</option></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Path Delimiter</label>
+                            <select id="path-delimiter">
+                                <option value=">" selected>> (greater-than)</option>
+                                <option value="|">| (pipe)</option>
+                                <option value=",">, (comma)</option>
+                                <option value="->">-> (arrow)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Converted Column</label>
+                            <select id="col-converted"><option value="">(optional)</option></select>
+                        </div>
+                    </div>
+                    <div class="extra-fields">
+                        <div class="form-group">
+                            <label>Dataset Filename <span class="hint">(used in code)</span></label>
+                            <input type="text" id="dataset-filename" placeholder="e.g. retail_omnichannel_dataset.csv">
+                        </div>
+                        <div class="form-group">
+                            <label>DataFrame Variable <span class="hint">(used in code)</span></label>
+                            <input type="text" id="df-varname" placeholder="e.g. retail" value="retail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Generate Button -->
+            <div class="generate-section">
+                <button class="btn-generate" id="btn-generate" onclick="generateCode()" disabled>
+                    <span class="btn-icon">⚡</span>
+                    Generate Python Code
+                </button>
+            </div>
+
+            <!-- Code Output -->
+            <div class="code-output-section" id="code-output-section">
+                <div id="output-section">
+                    <!-- Global toolbar -->
+                    <div class="global-code-toolbar">
+                        <div class="lang-badge">
+                            <div class="lang-dot"></div>
+                            Python 3 — Omni Channel Attribution
+                        </div>
+                        <div class="global-toolbar-actions">
+                            <button class="toolbar-btn" onclick="copyAllCode()" id="btn-copy-all">
+                                📋 Copy All
+                            </button>
+                            <button class="toolbar-btn" onclick="downloadCode()">
+                                💾 Download .py
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Individual code cells rendered here -->
+                    <div class="code-cells-container" id="code-cells-container"></div>
+
+                    <!-- Report Generation Button -->
+                    <div class="generate-section" id="report-btn-section" style="display:none; margin-top: 24px;">
+                        <button class="btn-report" onclick="generateReport()">
+                            <span>📊</span>
+                            Concepts
+                        </button>
+                    </div>
+
+                    <!-- Report Section -->
+                    <div class="report-section" id="report-section">
+                        <div class="report-panel">
+                            <div class="report-header">
+                                <div class="report-title">
+                                    📊 Executive Attribution Report
+                                </div>
+                            </div>
+                            <div class="report-content" id="report-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-brand">⚡ OmniCode</div>
+            <p>Omni Channel Marketing Code Generator &bull; Built for Marketing Teams</p>
+            <p style="margin-top: 6px;">Generates Python code based on proven attribution methodologies</p>
+        </footer>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✅</span>
+        <span id="toast-text">Copied to clipboard!</span>
+    </div>
+
+    <script>
+    // =========================================================
+    //  STATE
+    // =========================================================
+    let uploadedHeaders = [];
+    let uploadedRows = [];
+    let selectedModels = new Set();
+    let uploadedFileName = '';
+
+    // =========================================================
+    //  MOBILE NAV TOGGLE
+    // =========================================================
+    document.getElementById('nav-toggle').addEventListener('click', () => {
+        document.getElementById('nav-links').classList.toggle('open');
+    });
+    // Close nav when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(a => {
+        a.addEventListener('click', () => {
+            document.getElementById('nav-links').classList.remove('open');
+        });
+    });
+
+    // =========================================================
+    //  PARTICLES
+    // =========================================================
+    (function initParticles() {
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let PARTICLE_COUNT = 40;
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            // Reduce particles on small screens
+            PARTICLE_COUNT = window.innerWidth < 600 ? 20 : 40;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        for (let i = 0; i < 50; i++) {
+            particles.push({
+                x: Math.random() * (canvas.width || 1000),
+                y: Math.random() * (canvas.height || 800),
+                r: Math.random() * 1.5 + 0.5,
+                dx: (Math.random() - 0.5) * 0.3,
+                dy: (Math.random() - 0.5) * 0.3,
+                alpha: Math.random() * 0.3 + 0.1
+            });
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            const count = Math.min(particles.length, PARTICLE_COUNT);
+            for (let i = 0; i < count; i++) {
+                const p = particles[i];
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(139, 92, 246, ${p.alpha})`;
+                ctx.fill();
+                p.x += p.dx; p.y += p.dy;
+                if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+            }
+            for (let i = 0; i < count; i++) {
+                for (let j = i + 1; j < count; j++) {
+                    const dist = Math.hypot(particles[i].x - particles[j].x, particles[i].y - particles[j].y);
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(99, 102, 241, ${0.06 * (1 - dist / 120)})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(draw);
+        }
+        draw();
+    })();
+
+    // =========================================================
+    //  FILE UPLOAD
+    // =========================================================
+    const uploadZone = document.getElementById('upload-zone');
+    const fileInput = document.getElementById('file-input');
+
+    uploadZone.addEventListener('click', () => fileInput.click());
+    uploadZone.querySelector('.browse-btn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        fileInput.click();
+    });
+
+    uploadZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        uploadZone.classList.add('drag-over');
+    });
+    uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag-over'));
+    uploadZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        uploadZone.classList.remove('drag-over');
+        if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
+    });
+    fileInput.addEventListener('change', () => {
+        if (fileInput.files.length) handleFile(fileInput.files[0]);
+    });
+
+    document.getElementById('remove-file').addEventListener('click', () => {
+        fileInput.value = '';
+        uploadedHeaders = [];
+        uploadedRows = [];
+        uploadedFileName = '';
+        document.getElementById('file-info').classList.remove('visible');
+        document.getElementById('data-preview').classList.remove('visible');
+        uploadZone.classList.remove('has-file');
+        uploadZone.style.display = '';
+        populateColumnSelects([]);
+        updateGenerateBtn();
+    });
+
+    function handleFile(file) {
+        if (!file.name.toLowerCase().endsWith('.csv')) {
+            showToast('⚠️', 'Please upload a .csv file');
+            return;
+        }
+
+        uploadedFileName = file.name;
+        document.getElementById('file-name').textContent = file.name;
+        const sizeMB = (file.size / 1024 / 1024).toFixed(2);
+        document.getElementById('file-meta').textContent = sizeMB + ' MB • CSV';
+        document.getElementById('file-info').classList.add('visible');
+        uploadZone.classList.add('has-file');
+        document.getElementById('dataset-filename').value = file.name;
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            parseCSV(e.target.result);
+        };
+        reader.readAsText(file);
+    }
+
+    function parseCSV(text) {
+        const lines = text.split(/\r?\n/).filter(l => l.trim());
+        if (lines.length < 2) {
+            showToast('⚠️', 'CSV file appears empty');
+            return;
+        }
+
+        function parseLine(line) {
+            const result = [];
+            let current = '';
+            let inQuotes = false;
+            for (let i = 0; i < line.length; i++) {
+                const ch = line[i];
+                if (ch === '"') {
+                    inQuotes = !inQuotes;
+                } else if (ch === ',' && !inQuotes) {
+                    result.push(current.trim());
+                    current = '';
+                } else {
+                    current += ch;
+                }
+            }
+            result.push(current.trim());
+            return result;
+        }
+
+        uploadedHeaders = parseLine(lines[0]);
+        uploadedRows = [];
+        const previewCount = Math.min(lines.length - 1, 5);
+        for (let i = 1; i <= previewCount; i++) {
+            uploadedRows.push(parseLine(lines[i]));
+        }
+
+        renderPreview();
+        populateColumnSelects(uploadedHeaders);
+        updateGenerateBtn();
+        showToast('✅', 'Dataset loaded — ' + uploadedHeaders.length + ' columns detected');
+    }
+
+    function renderPreview() {
+        const table = document.getElementById('preview-table');
+        let html = '<thead><tr>';
+        uploadedHeaders.forEach(h => { html += '<th>' + escHTML(h) + '</th>'; });
+        html += '</tr></thead><tbody>';
+        uploadedRows.forEach(row => {
+            html += '<tr>';
+            row.forEach(cell => { html += '<td>' + escHTML(cell) + '</td>'; });
+            html += '</tr>';
+        });
+        html += '</tbody>';
+        table.innerHTML = html;
+        document.getElementById('data-preview').classList.add('visible');
+    }
+
+    function populateColumnSelects(headers) {
+        const ids = ['col-path', 'col-revenue', 'col-converted'];
+        const defaults = {
+            'col-path': ['path', 'channel_path', 'journey_path', 'touchpoint_path', 'channels'],
+            'col-revenue': ['revenue', 'total_revenue', 'amount', 'sales', 'value', 'conversion_value'],
+            'col-converted': ['converted', 'conversion', 'is_converted', 'converted_flag']
+        };
+
+        ids.forEach(id => {
+            const sel = document.getElementById(id);
+            sel.innerHTML = '';
+            if (headers.length === 0) {
+                const opt = document.createElement('option');
+                opt.value = '';
+                opt.textContent = 'Upload CSV first…';
+                sel.appendChild(opt);
+                return;
+            }
+            if (id === 'col-converted') {
+                const opt = document.createElement('option');
+                opt.value = ''; opt.textContent = '(optional)';
+                sel.appendChild(opt);
+            }
+            headers.forEach(h => {
+                const opt = document.createElement('option');
+                opt.value = h; opt.textContent = h;
+                sel.appendChild(opt);
+            });
+
+            const lowerHeaders = headers.map(h => h.toLowerCase().trim());
+            const matchList = defaults[id] || [];
+            for (const m of matchList) {
+                const idx = lowerHeaders.indexOf(m);
+                if (idx !== -1) {
+                    sel.value = headers[idx];
+                    break;
+                }
+            }
+        });
+    }
+
+    // =========================================================
+    //  MODEL SELECTION
+    // =========================================================
+    function selectModel(card) {
+        const model = card.dataset.model;
+        if (card.classList.contains('selected')) {
+            card.classList.remove('selected');
+            selectedModels.delete(model);
+        } else {
+            card.classList.add('selected');
+            selectedModels.add(model);
+        }
+        updateGenerateBtn();
+    }
+
+    function selectAllModels() {
+        const cards = document.querySelectorAll('.model-card');
+        const allSelected = selectedModels.size === 4;
+        cards.forEach(c => {
+            if (allSelected) {
+                c.classList.remove('selected');
+                selectedModels.delete(c.dataset.model);
+            } else {
+                c.classList.add('selected');
+                selectedModels.add(c.dataset.model);
+            }
+        });
+        updateGenerateBtn();
+    }
+
+    function updateGenerateBtn() {
+        const btn = document.getElementById('btn-generate');
+        const hasFile = uploadedHeaders.length > 0;
+        const hasModel = selectedModels.size > 0;
+        const hasPath = document.getElementById('col-path').value;
+        const hasRevenue = document.getElementById('col-revenue').value;
+        btn.disabled = !(hasFile && hasModel && hasPath && hasRevenue);
+    }
+
+    ['col-path', 'col-revenue', 'col-converted'].forEach(id => {
+        document.getElementById(id).addEventListener('change', updateGenerateBtn);
+    });
+
+    // =========================================================
+    //  CODE GENERATION — Matches .ipynb cell-by-cell
+    // =========================================================
+    function generateCode() {
+        const pathCol = document.getElementById('col-path').value;
+        const revCol = document.getElementById('col-revenue').value;
+        const convCol = document.getElementById('col-converted').value;
+        const delimiter = document.getElementById('path-delimiter').value;
+        const filename = document.getElementById('dataset-filename').value || uploadedFileName || 'dataset.csv';
+        const v = document.getElementById('df-varname').value.trim() || 'retail';
+        const vc = v + '_copy';
+
+        // Each block = { label, code, explanation }
+        const blocks = [];
+
+        // ---- IMPORTS (cell 0) ----
+        blocks.push({
+            label: 'Import Libraries',
+            code: '# import library\nimport pandas as pd\nimport numpy as np',
+            explanation: '<strong>Pandas</strong> is the core library for data manipulation — it provides DataFrames for tabular data. <strong>NumPy</strong> handles numerical operations. These two libraries form the foundation of every marketing analytics pipeline.'
+        });
+
+        // ---- LOAD DATA (cell 6) ----
+        blocks.push({
+            label: 'Load Dataset',
+            code: '# Load the data through pandas\n' + v + " = pd.read_csv('" + filename + "')\n" + v + '.head()',
+            explanation: 'Loads your customer journey dataset from a CSV file into a DataFrame. The <code>.head()</code> method displays the first 5 rows to verify the data loaded correctly. Each row represents a customer journey with columns like <code>' + pathCol + '</code> (touchpoint path) and <code>' + revCol + '</code> (revenue).'
+        });
+
+        // ---- MISSING VALUES (cell 7) ----
+        blocks.push({
+            label: 'Check Missing Values',
+            code: '# Missing values\n' + v + ".isna().sum().rename('Missing Values')",
+            explanation: 'Scans every column for missing (null/NaN) values. <strong>Data quality check</strong> — if the path or revenue columns have missing values, it could skew the attribution results. Address any missing data before proceeding.'
+        });
+
+        // ---- COPY (cell 8) ----
+        blocks.push({
+            label: 'Create Working Copy',
+            code: '# Create a copy of the ' + v + ' data\n' + vc + ' = ' + v + '.copy(deep = True)\n' + vc + '.head()',
+            explanation: 'Creates a <strong>deep copy</strong> of the original dataset. This is a best practice — all transformations happen on the copy, preserving the raw data intact for reference or reprocessing.'
+        });
+
+        // ---- FIRST TOUCH (cells 9, 10) ----
+        if (selectedModels.has('first_touch')) {
+            blocks.push({
+                label: 'First Touch — Extract Column',
+                code: '# creating the column as first touch\n' + vc + "['first_touch'] = " + vc + "['" + pathCol + "'].str.split('" + delimiter + "').str[0]\n" + vc + "['first_touch'].head()",
+                explanation: '<strong>First Touch Attribution</strong> assigns 100% credit to the <strong>first channel</strong> that initiated the customer journey. This line splits the path string by the delimiter and takes the first element <code>.str[0]</code>. Ideal for understanding which channels are best at <strong>customer acquisition</strong> and brand awareness.'
+            });
+            blocks.push({
+                label: 'First Touch — Revenue Attribution',
+                code: '# Group these first touch with ' + revCol + ' to find out the successful first touch\n' + "first_touch_group = " + vc + ".groupby('first_touch')['" + revCol + "'].sum().sort_values(ascending = False).rename('First Touch Revenues')\nround(first_touch_group,2)",
+                explanation: 'Groups all journeys by their first touchpoint channel and sums the total revenue. The result shows <strong>which channels drive the most revenue as entry points</strong>. Sorted in descending order — the top channel is your strongest acquisition source.'
+            });
+        }
+
+        // ---- LAST TOUCH (cells 11, 12) ----
+        if (selectedModels.has('last_touch')) {
+            blocks.push({
+                label: 'Last Touch — Extract Column',
+                code: '# create a new column as last_touch\n' + vc + "['last_touch'] = " + vc + "['" + pathCol + "'].str.split('" + delimiter + "').str[-1]\n" + vc + "['last_touch'].head()",
+                explanation: '<strong>Last Touch Attribution</strong> assigns 100% credit to the <strong>final channel</strong> before conversion. Uses <code>.str[-1]</code> to extract the last element from the path. Best for identifying which channels are the strongest <strong>conversion closers</strong>.'
+            });
+            blocks.push({
+                label: 'Last Touch — Revenue Attribution',
+                code: '# group the revenue\n' + "last_touch_group = " + vc + ".groupby('last_touch')['" + revCol + "'].sum().sort_values(ascending = False).rename('last Touch Revenue')\nround(last_touch_group,2)",
+                explanation: 'Aggregates revenue by the last channel in each journey. Shows <strong>which channels directly drive conversions</strong>. Useful for short sales cycles and direct-response campaigns where the closing touchpoint matters most.'
+            });
+        }
+
+        // ---- LINEAR / TIME DECAY shared setup (cells 13-18, 21) ----
+        if (selectedModels.has('linear') || selectedModels.has('time_decay')) {
+            blocks.push({
+                label: 'Split Path — Wide Format',
+                code: '# Linear attribbution -> split it wide\n' + "path_wide = " + vc + "['" + pathCol + "'].str.split('" + delimiter + "', expand = True)\npath_wide.head()",
+                explanation: 'Splits each journey path into separate columns — one per touchpoint position. For example, a 3-touchpoint journey <code>Social Media > Email > Website</code> becomes 3 columns. This "wide" format is needed for multi-touch attribution calculations.'
+            });
+            blocks.push({
+                label: 'Count Touchpoints',
+                code: '# count of customers at each touch points\n' + "touch_point_count = path_wide.notna().sum(axis = 1).rename('touch_point_count')\ntouch_point_count.head()",
+                explanation: 'Counts how many touchpoints each customer journey has by summing non-null values across the wide columns. This count (<strong>n</strong>) is used as the denominator in Linear Attribution (equal split) and in the Time Decay formula <code>n(n+1)/2</code>.'
+            });
+            blocks.push({
+                label: 'Convert to Long Format',
+                code: '# convert wide into long format\n' + "long = path_wide.reset_index().melt(id_vars = 'index', var_name = 'position', value_name = 'channel').dropna(subset=['channel'])\nlong.head()",
+                explanation: 'Transforms the wide table into a <strong>"long" format</strong> where each row represents one touchpoint. This is the standard structure for per-touchpoint attribution — it allows us to assign individual credit to each channel at each position in the journey.'
+            });
+            blocks.push({
+                label: 'Add Revenue & Counts',
+                code: '# add revenue and counts in the long table\n' + "concatenate = pd.concat([" + vc + "['" + revCol + "'], touch_point_count], axis = 1)",
+                explanation: 'Combines the revenue and touchpoint count into a single DataFrame that can be merged with the long table. This prepares the data for calculating per-touchpoint shares.'
+            });
+            blocks.push({
+                label: 'Merge Long Table',
+                code: '# merge inside the long table\n' + "long = long.merge(concatenate, left_on= 'index', right_index= True)\nlong.head()",
+                explanation: 'Joins the revenue and touchpoint count onto each row in the long table. Now every individual touchpoint row has access to the journey\'s total revenue and count — enabling per-touchpoint share calculations.'
+            });
+            blocks.push({
+                label: 'Convert Position (0→1)',
+                code: "# Convert the position from 0 to 1\nlong['positions'] = long['position'].astype(int) + 1\nlong.head()",
+                explanation: 'Converts zero-based position indexing to <strong>1-based</strong> (1st touch, 2nd touch, etc.). Essential for Time Decay Attribution where position determines weight — position 1 gets the least weight, the final position gets the most.'
+            });
+            blocks.push({
+                label: 'Clean Channel Names',
+                code: "# Clean up channel names\nlong['channel'] = (\n    long['channel']\n    .str.strip()       # remove leading/trailing spaces\n    .str.lower()       # make all lowercase (optional)\n    .str.title()       # capitalize nicely (optional)\n)",
+                explanation: 'Standardizes channel names by removing whitespace, converting to lowercase, then Title Case. This ensures <code>Social Media</code>, <code>social media</code>, and <code> Social Media </code> are all counted as the same channel.'
+            });
+        }
+
+        // ---- LINEAR share + attribution (cells 20, 22) ----
+        if (selectedModels.has('linear')) {
+            blocks.push({
+                label: 'Linear — Calculate Share',
+                code: '# linear share\n' + "long['linear_share'] = long['" + revCol + "']/long['touch_point_count']",
+                explanation: '<strong>Linear Attribution</strong> divides the total journey revenue equally among all touchpoints. Formula: <code>Share = Revenue ÷ Touch Point Count</code>. A journey worth $300 with 3 touchpoints gives $100 credit to each channel. This ensures no channel is ignored.'
+            });
+            blocks.push({
+                label: 'Linear — Attribution Result',
+                code: '# Linear Attribution\n' + "linear_attribution = long.groupby('channel')['linear_share'].sum().sort_values(ascending = False).rename('Linear Attribution Revenues')\nround(linear_attribution,2)",
+                explanation: 'Aggregates the linear shares across all journeys by channel. The result is the <strong>total attributed revenue per channel</strong> under equal-weight distribution. This is the most balanced multi-touch model — ideal for understanding overall channel contribution.'
+            });
+        }
+
+        // ---- TIME DECAY (cells 23-28) ----
+        if (selectedModels.has('time_decay')) {
+            blocks.push({
+                label: 'Time Decay — Denominator',
+                code: '# Time Decay Attribution we calculate the denominator\n' + "denom = touch_point_count * (touch_point_count +1)/2",
+                explanation: '<strong>Time Decay</strong> gives more credit to touchpoints closer to conversion. The denominator uses the formula <code>n(n+1)/2</code> (sum of 1 to n). For a 3-touch journey: denominator = 3×4/2 = 6. Positions get weights 1/6, 2/6, 3/6 — the final touch gets the most credit.'
+            });
+            blocks.push({
+                label: 'Time Decay — Merge Denominator',
+                code: '# get the denominator inside the long table\n' + "long = long.merge(denom, left_on ='index', right_index = True)\nlong.head()",
+                explanation: 'Merges the calculated denominator back into the long table so each touchpoint row has access to its journey\'s denominator value for weight calculation.'
+            });
+            blocks.push({
+                label: 'Time Decay — Rename Column',
+                code: "long.rename(columns = {'touch_point_count_y' : 'denominator'}, inplace = True)",
+                explanation: 'After the merge, Pandas creates a duplicate column suffix <code>_y</code>. This renames <code>touch_point_count_y</code> to <code>denominator</code> for clarity in subsequent calculations.'
+            });
+            blocks.push({
+                label: 'Time Decay — Weights & Share',
+                code: '# weights of the channels\n' + "long['weights'] = long['positions'] / long['denominator']\nlong['share'] = long['" + revCol + "'] * long['weights']",
+                explanation: 'Calculates each touchpoint\'s <strong>positional weight</strong> as <code>Position ÷ Denominator</code>, then multiplies by revenue to get the dollar share. Example: in a $600 journey with 3 touches, position 3 gets weight 3/6 = 0.5, earning $300 credit.'
+            });
+            blocks.push({
+                label: 'Time Decay — Attribution Result',
+                code: '# Time Decay Attribution\n' + "time_decay = long.groupby('channel')['share'].sum().sort_values(ascending = False).rename('Time Decay Attribution Revenue')\nround(time_decay,2)",
+                explanation: 'Final aggregation — sums the weighted revenue shares by channel. The result shows <strong>revenue credit with recency bias</strong>. Channels appearing later in journeys (closer to conversion) receive proportionally more credit. Best for B2B and long sales cycles.'
+            });
+        }
+
+        displayCodeBlocks(blocks);
+    }
+
+    // =========================================================
+    //  SYNTAX HIGHLIGHTING — safe tokenizer (no regex on HTML)
+    // =========================================================
+    const PY_KEYWORDS = new Set([
+        'import', 'from', 'as', 'def', 'class', 'return', 'if', 'else', 'elif',
+        'for', 'while', 'in', 'not', 'and', 'or', 'is', 'True', 'False', 'None',
+        'with', 'lambda', 'try', 'except', 'finally', 'raise', 'pass', 'del',
+        'global', 'nonlocal', 'assert', 'yield', 'break', 'continue'
+    ]);
+    const PY_BUILTINS = new Set([
+        'print', 'open', 'round', 'int', 'str', 'float', 'len', 'range',
+        'sum', 'max', 'min', 'abs', 'sorted', 'list', 'dict', 'set', 'tuple',
+        'type', 'isinstance', 'enumerate', 'zip', 'map', 'filter'
+    ]);
+
+    function highlightPython(code) {
+        return code.split('\n').map(highlightLine).join('\n');
+    }
+
+    function highlightLine(line) {
+        // Full-line comment (with leading whitespace preserved)
+        const trimmed = line.trimStart();
+        if (trimmed.startsWith('#')) {
+            const indent = line.length - trimmed.length;
+            return escHTML(line.substring(0, indent)) +
+                   '<span class="cm">' + escHTML(line.substring(indent)) + '</span>';
+        }
+
+        let result = '';
+        let i = 0;
+
+        while (i < line.length) {
+            // --- Inline comment: # not inside a string ---
+            if (line[i] === '#') {
+                result += '<span class="cm">' + escHTML(line.substring(i)) + '</span>';
+                break;
+            }
+
+            // --- String literal (single or double quote) ---
+            if (line[i] === "'" || line[i] === '"') {
+                const quote = line[i];
+                let j = i + 1;
+                while (j < line.length && line[j] !== quote) {
+                    if (line[j] === '\\') j++; // skip escaped char
+                    j++;
+                }
+                if (j < line.length) j++; // include closing quote
+                result += '<span class="str">' + escHTML(line.substring(i, j)) + '</span>';
+                i = j;
+                continue;
+            }
+
+            // --- Word (identifier / keyword / builtin) ---
+            if (/[a-zA-Z_]/.test(line[i])) {
+                let j = i;
+                while (j < line.length && /\w/.test(line[j])) j++;
+                const word = line.substring(i, j);
+
+                if (PY_KEYWORDS.has(word)) {
+                    result += '<span class="kw">' + escHTML(word) + '</span>';
+                } else if (PY_BUILTINS.has(word)) {
+                    result += '<span class="fn">' + escHTML(word) + '</span>';
+                } else {
+                    // Check if it's a function call (next non-space char is '(')
+                    let k = j;
+                    while (k < line.length && line[k] === ' ') k++;
+                    if (k < line.length && line[k] === '(') {
+                        result += '<span class="fn">' + escHTML(word) + '</span>';
+                    } else {
+                        result += escHTML(word);
+                    }
+                }
+                i = j;
+                continue;
+            }
+
+            // --- Number ---
+            if (/\d/.test(line[i])) {
+                let j = i;
+                while (j < line.length && /[\d.]/.test(line[j])) j++;
+                result += '<span class="num">' + escHTML(line.substring(i, j)) + '</span>';
+                i = j;
+                continue;
+            }
+
+            // --- Any other character (operators, whitespace, punctuation) ---
+            result += escHTML(line[i]);
+            i++;
+        }
+
+        return result;
+    }
+
+    // Store all blocks globally for "Copy All" and "Download"
+    let allCodeBlocks = [];
+
+    function displayCodeBlocks(blocks) {
+        allCodeBlocks = blocks;
+        const outputSection = document.getElementById('code-output-section');
+        const container = document.getElementById('code-cells-container');
+
+        container.innerHTML = '';
+
+        blocks.forEach((block, idx) => {
+            const cellDiv = document.createElement('div');
+            cellDiv.className = 'code-cell';
+
+            let cellHTML =
+                '<div class="code-cell-header">' +
+                    '<div class="cell-label">' +
+                        '<span class="cell-number">' + (idx + 1) + '</span>' +
+                        '<span class="cell-title">' + escHTML(block.label) + '</span>' +
+                    '</div>' +
+                    '<button class="cell-copy-btn" onclick="copyBlock(' + idx + ', this)">📋 Copy</button>' +
+                '</div>' +
+                '<div class="code-block-wrap">' +
+                    '<div class="code-block">' +
+                        '<pre>' + highlightPython(block.code) + '</pre>' +
+                    '</div>' +
+                '</div>';
+
+            // Add explanation panel if present
+            if (block.explanation) {
+                cellHTML +=
+                    '<div class="cell-explanation">' +
+                        '<span class="exp-icon">💡</span>' +
+                        '<div class="exp-text">' + block.explanation + '</div>' +
+                    '</div>';
+            }
+
+            cellDiv.innerHTML = cellHTML;
+            container.appendChild(cellDiv);
+        });
+
+        outputSection.classList.add('visible');
+
+        // Show the report button
+        document.getElementById('report-btn-section').style.display = 'block';
+
+        setTimeout(() => {
+            document.getElementById('output-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+    }
+
+    // =========================================================
+    //  COPY / DOWNLOAD
+    // =========================================================
+    function copyBlock(idx, btn) {
+        const code = allCodeBlocks[idx].code;
+        navigator.clipboard.writeText(code).then(() => {
+            btn.classList.add('copied');
+            btn.innerHTML = '✅ Copied!';
+            showToast('✅', 'Cell ' + (idx + 1) + ' copied!');
+            setTimeout(() => {
+                btn.classList.remove('copied');
+                btn.innerHTML = '📋 Copy';
+            }, 2000);
+        });
+    }
+
+    function copyAllCode() {
+        const allCode = allCodeBlocks.map(b => b.code).join('\n\n');
+        navigator.clipboard.writeText(allCode).then(() => {
+            const btn = document.getElementById('btn-copy-all');
+            btn.classList.add('copied');
+            btn.innerHTML = '✅ All Copied!';
+            showToast('✅', 'All ' + allCodeBlocks.length + ' cells copied!');
+            setTimeout(() => {
+                btn.classList.remove('copied');
+                btn.innerHTML = '📋 Copy All';
+            }, 2000);
+        });
+    }
+
+    function downloadCode() {
+        const allCode = allCodeBlocks.map(b => b.code).join('\n\n');
+        const blob = new Blob([allCode], { type: 'text/x-python' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'omni_channel_attribution.py';
+        a.click();
+        URL.revokeObjectURL(url);
+        showToast('💾', 'Python file downloaded!');
+    }
+
+    // =========================================================
+    //  TOAST
+    // =========================================================
+    function showToast(icon, text) {
+        const toast = document.getElementById('toast');
+        document.getElementById('toast-text').textContent = text;
+        toast.querySelector('.toast-icon').textContent = icon;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    // =========================================================
+    //  UTILS
+    // =========================================================
+    function escHTML(s) {
+        const div = document.createElement('div');
+        div.textContent = s;
+        return div.innerHTML;
+    }
+
+    // =========================================================
+    //  REPORT GENERATION
+    // =========================================================
+    function generateReport() {
+        const models = Array.from(selectedModels);
+        const modelNames = {
+            first_touch: 'First Touch',
+            last_touch: 'Last Touch',
+            linear: 'Linear',
+            time_decay: 'Time Decay'
+        };
+        const selectedList = models.map(m => modelNames[m]).join(', ');
+        const dateStr = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+        let html = '';
+
+        // --- HEADER ---
+        html += '<h2>📋 Executive Summary</h2>';
+        html += '<p>This report presents an Omni-Channel Marketing Attribution Analysis using <strong>' + selectedList + '</strong> model' + (models.length > 1 ? 's' : '') + '. The analysis helps leadership make data-driven decisions about marketing channel budget allocation and strategy.</p>';
+
+        html += '<div class="insight-card">';
+        html += '<div class="insight-label">🎯 Objective</div>';
+        html += '<p>Determine how much revenue credit each marketing channel deserves based on its role in customer journeys — enabling smarter budget allocation and strategic growth decisions.</p>';
+        html += '</div>';
+
+        // --- METHODOLOGY ---
+        html += '<h2>📐 Attribution Models Used</h2>';
+        html += '<p>Each model distributes revenue credit differently across touchpoints in a customer journey. Using multiple models provides a comprehensive view of channel performance.</p>';
+
+        html += '<table class="report-table">';
+        html += '<thead><tr><th>Model</th><th>Methodology</th><th>Best For</th><th>Limitation</th></tr></thead>';
+        html += '<tbody>';
+
+        if (selectedModels.has('first_touch')) {
+            html += '<tr><td class="highlight">First Touch</td><td>100% credit to the first channel that initiated the journey</td><td>Brand awareness, customer acquisition, startups</td><td>Ignores all downstream nurturing touchpoints</td></tr>';
+        }
+        if (selectedModels.has('last_touch')) {
+            html += '<tr><td class="highlight">Last Touch</td><td>100% credit to the final channel before conversion</td><td>Short sales cycles, direct-response campaigns</td><td>Under-values top/middle-of-funnel investments</td></tr>';
+        }
+        if (selectedModels.has('linear')) {
+            html += '<tr><td class="highlight">Linear</td><td>Equal credit distributed across all touchpoints: Share = Revenue ÷ Touch Count</td><td>Multi-channel campaigns, balanced budget allocation</td><td>Treats all touches as equally important regardless of impact</td></tr>';
+        }
+        if (selectedModels.has('time_decay')) {
+            html += '<tr><td class="highlight">Time Decay</td><td>Weighted credit: later touchpoints get more. Weight = Position ÷ n(n+1)/2</td><td>B2B, long sales cycles, high-consideration purchases</td><td>More complex; requires position tracking</td></tr>';
+        }
+        html += '</tbody></table>';
+
+        // --- KEY INSIGHTS ---
+        html += '<h2>💡 Key Insights</h2>';
+
+        if (models.length >= 2) {
+            html += '<div class="insight-card">';
+            html += '<div class="insight-label">⚠️ Single-Touch vs Multi-Touch Bias</div>';
+            html += '<p>First Touch overvalues awareness channels (top-of-funnel) while Last Touch overvalues conversion closers (bottom-of-funnel). If using only one model, there\'s a risk of <strong>misallocating budget</strong> by defunding channels that are critical at other stages of the journey.</p>';
+            html += '</div>';
+        }
+
+        if (selectedModels.has('linear') || selectedModels.has('time_decay')) {
+            html += '<div class="insight-card">';
+            html += '<div class="insight-label">✅ Multi-Touch Provides Stability</div>';
+            html += '<p>Multi-touch models (Linear and Time Decay) give a more <strong>balanced and reliable</strong> view of channel performance. Channels that consistently appear across all stages of the journey will show stable revenue attribution — these are your reliable pillars.</p>';
+            html += '</div>';
+        }
+
+        html += '<div class="insight-card">';
+        html += '<div class="insight-label">📊 Actionable Recommendation</div>';
+        html += '<p>Implement multi-touch attribution (Linear or Time Decay) as the <strong>primary decision engine</strong> while auditing against First/Last Touch to maintain a healthy balance between brand awareness and sales conversion.</p>';
+        html += '</div>';
+
+        // --- STRATEGIC RECOMMENDATIONS ---
+        html += '<h2>🎯 Strategic Recommendations</h2>';
+        html += '<p>Based on the attribution analysis, the following budget allocation strategies are recommended for different business contexts:</p>';
+
+        html += '<div class="recommendation-grid">';
+
+        html += '<div class="rec-card">';
+        html += '<div class="rec-scenario startup">Startups & Growth Phase</div>';
+        html += '<div class="rec-model">→ Use First Touch Attribution</div>';
+        html += '<div class="rec-desc">Identify and scale top-performing customer acquisition channels. Focus budget on channels that bring the most new customers.</div>';
+        html += '</div>';
+
+        html += '<div class="rec-card">';
+        html += '<div class="rec-scenario ecommerce">E-Commerce & Short Sales Cycles</div>';
+        html += '<div class="rec-model">→ Use Last Touch Attribution</div>';
+        html += '<div class="rec-desc">Optimize instant conversion channels and checkout flows. Focus on channels that close deals fastest.</div>';
+        html += '</div>';
+
+        html += '<div class="rec-card">';
+        html += '<div class="rec-scenario multichannel">Multi-Channel Campaigns</div>';
+        html += '<div class="rec-model">→ Use Linear Attribution</div>';
+        html += '<div class="rec-desc">Balanced budget distribution across all channels. No channel is ignored — ideal for campaigns valuing every touchpoint equally.</div>';
+        html += '</div>';
+
+        html += '<div class="rec-card">';
+        html += '<div class="rec-scenario b2b">B2B & High-Value Sales</div>';
+        html += '<div class="rec-model">→ Use Time Decay Attribution</div>';
+        html += '<div class="rec-desc">Heavily weight closing tactics while preserving credit for initial deal nurturing. Best for long consideration periods.</div>';
+        html += '</div>';
+
+        html += '</div>';
+
+        // --- KEY METRICS ---
+        html += '<h2>📏 Key Metrics Explained</h2>';
+        html += '<table class="report-table">';
+        html += '<thead><tr><th>Metric</th><th>Description</th><th>Used In</th></tr></thead>';
+        html += '<tbody>';
+        html += '<tr><td class="highlight">Attributed Revenue</td><td>Sum of revenue allocated to a channel under a specific model</td><td>All models</td></tr>';
+        html += '<tr><td class="highlight">Touch Point Count (n)</td><td>Number of channel interactions in a customer\'s journey path</td><td>Linear, Time Decay</td></tr>';
+        html += '<tr><td class="highlight">Position (p)</td><td>1-based sequential index of a touchpoint (1st, 2nd, ... nth)</td><td>Time Decay</td></tr>';
+        html += '<tr><td class="highlight">Denominator</td><td>n(n+1)/2 — sum of natural numbers up to n, used for proportional weighting</td><td>Time Decay</td></tr>';
+        html += '<tr><td class="highlight">Weight</td><td>Position ÷ Denominator — fractional credit assigned to each position</td><td>Time Decay</td></tr>';
+        html += '<tr><td class="highlight">Linear Share</td><td>Revenue ÷ Touch Point Count — equal share per touchpoint</td><td>Linear</td></tr>';
+        html += '</tbody></table>';
+
+        // --- NEXT STEPS ---
+        html += '<h2>🚀 Recommended Next Steps</h2>';
+        html += '<ol>';
+        html += '<li><strong>Run the generated code</strong> on your dataset in Jupyter/Colab to get actual revenue numbers per channel.</li>';
+        html += '<li><strong>Compare results</strong> across models — channels that rank consistently high across all models are your safest investments.</li>';
+        html += '<li><strong>Identify discrepancies</strong> — channels that rank very differently between First Touch and Last Touch reveal funnel-stage specialization.</li>';
+        html += '<li><strong>Reallocate budget</strong> based on business objectives: acquisition (First Touch), conversion (Last Touch), balanced (Linear), or recency-weighted (Time Decay).</li>';
+        html += '<li><strong>Re-run quarterly</strong> to track how channel effectiveness evolves over time.</li>';
+        html += '</ol>';
+
+        // --- FOOTER ---
+        html += '<p style="margin-top: 28px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.78rem; color: var(--text-muted);">Report generated by <strong>OmniCode</strong> — Omni Channel Marketing Attribution Code Generator. Based on attribution methodology by Prof. Vishal Chugh.</p>';
+
+        // Render report
+        document.getElementById('report-content').innerHTML = html;
+        document.getElementById('report-section').classList.add('visible');
+
+        setTimeout(() => {
+            document.getElementById('report-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 200);
+
+        showToast('📊', 'Management report generated!');
+    }
+
+
+
+    </script>
+
+</body>
+</html>
